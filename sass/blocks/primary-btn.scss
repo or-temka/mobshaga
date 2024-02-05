@@ -1,0 +1,23 @@
+.primary-btn {
+  
+  background-color: $main-color;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  padding: 13px 21px;
+  border-radius: 5px;
+
+  &:hover {
+    background-color: lighten($main-color, 8%);
+  }
+
+  &--with-icon {
+    padding-left: 56px;
+    background-repeat: no-repeat;
+    background-position: center left 15px;
+  }
+
+  &--category {
+    background-image: url('../source/svg/category.svg');
+  }
+}

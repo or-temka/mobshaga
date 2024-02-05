@@ -1,5 +1,5 @@
-import {SortBtns} from '../blocks/product-sort.js';
-import {OpenMenuBtn} from '../blocks/open-menu-btn.js';
+import {SortBtns} from './blocks/product-sort.js';
+import {OpenMenuBtn} from './blocks/open-menu-btn.js';
 
 new OpenMenuBtn('mobileMenuBtn', () => {
   document.getElementById('mobile-menu').style.display = "block";

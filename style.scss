@@ -1,7 +1,18 @@
-@import 'styles/imports';
+@import 'sass/imports';
 
-@import 'blocks/primary-btn';
-@import 'blocks/product-sort';
-@import 'blocks/product';
-@import 'blocks/next-btn';
-@import 'blocks/marketplace';
+
+@import 'sass/blocks/product-sort';
+@import 'sass/blocks/product';
+@import 'sass/blocks/next-btn';
+@import 'sass/blocks/marketplace';
+
+//Выделения для данной страницы
+.down-menu {
+  &__svg-img--search {
+    color: $main-color;
+  }
+
+  &__btn-label--search {
+    color: $main-color;
+  }
+}

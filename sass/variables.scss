@@ -1,0 +1,31 @@
+// Colors
+$main-color: #7000FF; //Основной цвет приложения (основные акценты с данным цветом)
+$second-color: #ffffff; //Вторичный цвет (обычно с ним фон)
+$text-color: #333333; //Цвет текста (не черный)
+$grey-color: #828282; 
+$background-color: #F9F9F9;
+$choice-color: #E6E6E6; //Цвет для выбранной, к примеру, кнопки
+$border-color: #CED4DA; //Обычно цвет оводки (слегка голубоватый)
+
+// Font-families
+$main-font-family: 'Rubik', Arial, Helvetica, sans-serif;
+
+:root {
+  --simple-text-size: 16px;
+  --small-text-size: 14px;
+  --medium-text-size: 18px;
+  --big-text-size: 20px;
+  --bigest-text-size: 24px;
+  --mega-text-size: 36px;
+}
+
+@media (max-width: 650px) {
+  :root {
+    --simple-text-size: 16px;
+    --small-text-size: 14px;
+    --medium-text-size: 17px;
+    --big-text-size: 18px;
+    --bigest-text-size: 20px;
+    --mega-text-size: 24px;
+  }
+}

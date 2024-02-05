@@ -1,0 +1,64 @@
+.down-menu {
+  position: fixed;
+  bottom: 0;
+  z-index: 300;
+  width: 100%;
+  background-color: #fff;
+  @include simple-shadow;
+  display: none;
+
+  &__buttons {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 8px;
+    margin-bottom: 6px;
+    
+  }
+
+  &__btn {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 7px;
+    
+    &:hover {
+      & .down-menu__svg-img {
+        color: $text-color;
+        
+      }
+      & .down-menu__btn-label {
+        color: $text-color;
+      }
+    }
+  }
+
+  &__svg-img {
+    width: 22px;
+    height: 22px;
+    color: $border-color;
+  }
+
+  &__btn-label {
+    font-size: 12px;
+    color: $grey-color;
+  }
+
+  &__profile-btn {
+    row-gap: 4px;
+  }
+
+  &__profile-img {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+}
+
+@media (max-width: 930px) {
+  .down-menu {
+    display: block;
+  }
+}

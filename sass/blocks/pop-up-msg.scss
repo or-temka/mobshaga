@@ -1,0 +1,43 @@
+.pop-up-msg {
+  width: 100%;
+  
+  position: fixed;
+  bottom: 20px;
+  z-index: 1000;
+  
+  display: none;
+
+  &__container {
+    margin: 0 auto;
+    width: 90%;
+    background-color: #fff;
+    @include strong-shadow;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 30px;
+    align-items: center;
+  }
+
+  &__msg {
+
+  }
+
+  &__warning-img {
+    display: none;
+  }
+
+  &__btn {
+    padding: 10px 50px;
+    display: none;
+  }
+}
+
+@media (max-width: 930px) {
+  .pop-up-msg {
+    &__container {
+      margin-bottom: 50px;
+      width: 80%;
+    }
+  }
+}

@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Название товара | Мобщага</title>
+  <link rel="stylesheet" href="/node_modules/normalize.css/normalize.css" type = "text/css">
+  <link rel="stylesheet" href="/source/fonts/rubik/stylesheet.css" type = "text/css">
+  <link rel="stylesheet" href="product.css">
+</head>
+<body>
+  <!-- header ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+  <header class="header">
+    <div class="wrapper header__items">
+      <a href="/">
+        <div class="logo header__logo">
+          <h1 class="h1"><span class="logo__main-color header__logo">М</span>общага</h1>
+        </div>
+      </a>
+      <div class="header__right-panel">
+        <input type="text" class="input input--search header__search" placeholder="Поиск">
+        <ul class="header__menu menu">
+          <li class="header__menu-item menu__item"><a href="#">Магазины</a></li>
+          <li class="header__menu-item menu__item"><a href="#">Поездки</a></li>
+          <li class="header__menu-item menu__item"><a href="#">Вахта</a></li>
+          <li class="header__menu-item menu__item menu__parent">
+            <a href="#" class="menu__parent-text">Торговая площадка</a>
+            <ul class="header__menu-child menu__child">
+              <li class="menu__item menu__item-child"><a href="#">Товары</a></li>
+              <li class="menu__item menu__item-child"><a href="#">Аренда товаров</a></li>
+              <li class="menu__item menu__item-child"><a href="#">Услуги</a></li>
+            </ul>
+          </li>
+          <li class="header__menu-item header__sign-in"><a href="#">Войти</a></li>
+        </ul>
+        <div id="mobileMenuBtn" class="open-menu-btn open-menu-btn--not-active header__mobile-btn">
+          <div class="open-menu-btn__first-line open-menu-btn__line"></div>
+          <div class="open-menu-btn__second-line open-menu-btn__line"></div>
+          <div class="open-menu-btn__third-line open-menu-btn__line"></div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- header end ------------------------------------------------------------------------------------- -->
+
+  <!-- Mobile menu -->
+  <nav id="mobile-menu" class="mobile-menu">
+    <div class="mobile-menu__container">
+      <ul class="menu mobile-menu__menu">
+        <li class="menu__item mobile-menu__menu-item"><a class="mobile-menu__link" href="#">Магазины</a></li>
+        <li class="menu__item mobile-menu__menu-item"><a class="mobile-menu__link" href="#">Поездки</a></li>
+        <li class="menu__item mobile-menu__menu-item"><a class="mobile-menu__link" href="#">Вахта</a></li>
+      </ul>
+      <ul class="menu mobile-menu__menu">
+        <li class="menu__item mobile-menu__menu-item mobile-menu__menu-label"><a class="mobile-menu__link" href="#">Торговая площадка</a></li>
+        <li class="menu__item mobile-menu__menu-item"><a class="mobile-menu__link" href="#">Товары</a></li>
+        <li class="menu__item mobile-menu__menu-item"><a class="mobile-menu__link" href="#">Аренда товаров</a></li>
+        <li class="menu__item mobile-menu__menu-item"><a class="mobile-menu__link" href="#">Услуги</a></li>
+      </ul>
+      <ul class="menu mobile-menu__menu">
+        <li class="menu__item mobile-menu__menu-item mobile-menu__menu-label"><a class="mobile-menu__link" href="#">Добавить</a></li>
+        <li class="menu__item mobile-menu__menu-item"><a class="mobile-menu__link" href="#">Объявление</a></li>
+        <li class="menu__item mobile-menu__menu-item"><a class="mobile-menu__link" href="#">Поездку</a></li>
+        <li class="menu__item mobile-menu__menu-item"><a class="mobile-menu__link" href="#">Свой магазин</a></li>
+      </ul>
+      <ul class="menu mobile-menu__menu">
+        <li class="menu__item mobile-menu__menu-item mobile-menu__menu-label"><a class="mobile-menu__link" href="#">Профиль</a></li>
+        <li class="menu__item mobile-menu__menu-item"><a class="mobile-menu__link" href="#">Мой профиль</a></li>
+        <li class="menu__item mobile-menu__menu-item"><a class="mobile-menu__link" href="#">Сообщения</a></li>
+        <li class="menu__item mobile-menu__menu-item"><a class="mobile-menu__link" href="#">Уведомления</a></li>
+        <li class="menu__item mobile-menu__menu-item"><a class="mobile-menu__link" href="#">Редактировать профиль</a></li>
+        <li class="menu__item mobile-menu__menu-item"><a class="mobile-menu__link" href="#">Выйти из аккаунта</a></li>
+      </ul>
+      <div class="mobile-menu__more-btns">
+        <span class="mobile-menu__more-btn"><a class="mobile-menu__more-link" href="#">Правовые документы</a></span>
+        <span class="mobile-menu__more-btn"><a class="mobile-menu__more-link" href="#">Сообщить об ошибке</a></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- mobile down menu -->
+  <nav class="down-menu">
+    <div class="down-menu__buttons">
+      <a href="#">
+        <div class="down-menu__btn down-menu__btn--search">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path class="down-menu__svg-img down-menu__svg-img--search" fill-rule="evenodd" clip-rule="evenodd" d="M15.1534 13.6581C16.4727 11.9566 17.0944 9.81627 16.8922 7.67244C16.69 5.52862 15.6789 3.5424 14.0648 2.11786C12.4506 0.693311 10.3546 -0.0625465 8.20313 0.00405526C6.05167 0.070657 4.00638 0.954715 2.48335 2.47638C0.959004 3.99909 0.0724087 6.04599 0.00424256 8.19994C-0.0639235 10.3539 0.69147 12.4528 2.11649 14.0689C3.5415 15.6851 5.52889 16.6968 7.67366 16.8979C9.81843 17.0991 11.9592 16.4745 13.6596 15.1515L13.7051 15.1991L18.1929 19.6898C18.2912 19.7882 18.4079 19.8662 18.5364 19.9194C18.6648 19.9726 18.8024 20 18.9415 20C19.0805 20 19.2181 19.9726 19.3465 19.9194C19.475 19.8662 19.5917 19.7882 19.69 19.6898C19.7883 19.5915 19.8662 19.4748 19.9194 19.3463C19.9726 19.2178 20 19.0801 20 18.941C20 18.802 19.9726 18.6643 19.9194 18.5358C19.8662 18.4073 19.7883 18.2906 19.69 18.1922L15.201 13.7026C15.1856 13.6873 15.1697 13.6725 15.1534 13.6581ZM12.9571 3.97398C13.5544 4.56189 14.0295 5.26229 14.3549 6.03479C14.6803 6.80728 14.8496 7.63659 14.853 8.47486C14.8564 9.31313 14.6939 10.1438 14.3748 10.9189C14.0557 11.694 13.5863 12.3983 12.9938 12.991C12.4013 13.5838 11.6973 14.0533 10.9225 14.3725C10.1477 14.6918 9.31739 14.8543 8.47945 14.8509C7.64151 14.8475 6.81254 14.6782 6.04035 14.3526C5.26816 14.0271 4.56804 13.5519 3.98036 12.9543C2.80594 11.7601 2.15079 10.1501 2.15761 8.47486C2.16443 6.79964 2.83267 5.19497 4.01677 4.0104C5.20087 2.82583 6.80489 2.15732 8.47945 2.1505C10.154 2.14368 11.7634 2.7991 12.9571 3.97398Z" fill="currentColor"/>
+          </svg>
+          <span class="down-menu__btn-label down-menu__btn-label--search">Поиск</span>
+        </div>
+      </a>
+      <a href="#">
+        <div class="down-menu__btn down-menu__btn--ads">
+          <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path class="down-menu__svg-img down-menu__svg-img--ads" d="M10.5 7.51493V15.8383M6.42857 11.6766H14.5714M9.15371 1.36533L2.368 5.32865C1.95237 5.57133 1.60691 5.92204 1.36666 6.34522C1.12641 6.7684 0.999915 7.249 1 7.73827V17.2255C1 17.9614 1.28597 18.6671 1.795 19.1874C2.30402 19.7077 2.99441 20 3.71429 20H17.2857C18.0056 20 18.696 19.7077 19.205 19.1874C19.714 18.6671 20 17.9614 20 17.2255V7.73688C19.9998 7.24784 19.8732 6.76754 19.633 6.34462C19.3928 5.92171 19.0474 5.57121 18.632 5.32865L11.8463 1.36533C11.4363 1.12592 10.9722 1 10.5 1C10.0278 1 9.56375 1.12592 9.15371 1.36533Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span class="down-menu__btn-label down-menu__btn-label--ads">Объявления</span>
+        </div>
+      </a>
+      <a href="#">
+        <div class="down-menu__btn down-menu__btn--msg">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path class="down-menu__svg-img down-menu__svg-img--msg" d="M18 1.01148e-06H2C0.897 1.01148e-06 0 0.894001 0 1.992V14.008C0 15.106 0.897 16 2 16H5V20L11.351 16H18C19.103 16 20 15.106 20 14.008V1.992C19.9984 1.46279 19.7869 0.95583 19.412 0.582372C19.037 0.208914 18.5292 -0.000531115 18 1.01148e-06Z" fill="currentColor"/>
+          </svg>
+          <span class="down-menu__btn-label down-menu__btn-label--msg">Сообщения</span>
+        </div>
+      </a>
+      <a href="#">
+        <div class="down-menu__btn down-menu__profile-btn">
+          <img src="../../../source/profile_img/pf1.png" alt="1" class="down-menu__profile-img">
+          <span class="down-menu__btn-label">Профиль</span>
+        </div>
+      </a>
+    </div>
+  </nav>
+
+  <!-- pop-up-msg -->
+  <div class="pop-up-msg">
+    <div class="pop-up-msg__container">
+      <span class="pop-up-msg__msg">Какое-то сообщение</span>
+      <img class="pop-up-msg__warning-img" src="source/svg/warning.svg" alt="Внимание">
+      <button class="primary-btn pop-up-msg__btn">Хорошо</button>
+    </div>
+  </div>
+
+  <!-- main ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+  <main class="main">
+    <div class="wrapper">
+      <section class="main__section">
+        <!-- main__header -->
+        <div class="main__header">
+          <div class="main__head-line main__head-first-line">
+            <h2 class="h2 main__label">Название товара</h2>
+          </div>
+        </div>
+        <!-- main content -->
+        <div class="main__content">
+          <div class="product-page">
+            <div class="product-page__main-info">
+              <div class="product-page__photo-container">
+                <div class="big-product-photo">
+                  <div class="big-product-photo__prev-photo-btn"></div>
+                  <img src="" alt="">
+                  <div class="big-product-photo__next-photo-btn"></div>
+                </div>
+              </div>
+            </div>
+            <div class="product-page__about">
+
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+  <!-- main end ------------------------------------------------------------------------------------- -->
+
+  <!-- footer ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+  <footer class="footer">
+    <div class="wrapper">
+      <div class="footer__first-line">
+        <a href="/">
+          <div class="logo">
+            <span class="logo__main-color">М</span>общага
+          </div>
+        </a>
+        <div class="footer__menu">
+          <ul class="footer__menu-column menu">
+            <li class="footer__menu-item footer__menu-main-item menu__item">
+              <a href="#">Торговая площадка</a>
+            </li>
+            <li class="footer__menu-item menu__item">
+              <a href="#">Товары</a>
+            </li>
+            <li class="footer__menu-item menu__item">
+              <a href="#">Аренда товаров</a>
+            </li>
+            <li class="footer__menu-item menu__item">
+              <a href="#">Услуги</a>
+            </li>
+          </ul>
+          <ul class="footer__menu-column menu">
+            <li class="footer__menu-item footer__menu-main-item menu__item">
+              <a href="#">Добавить</a>
+            </li>
+            <li class="footer__menu-item menu__item">
+              <a href="#">Объявление</a>
+            </li>
+            <li class="footer__menu-item menu__item">
+              <a href="#">Поездку</a>
+            </li>
+            <li class="footer__menu-item menu__item">
+              <a href="#">Свой магазин</a>
+            </li>
+          </ul>
+          <ul class="footer__menu-column menu">
+            <li class="footer__menu-item footer__menu-main-item menu__item">
+              <a href="#">Профиль</a>
+            </li>
+            <li class="footer__menu-item menu__item">
+              <a href="#">Мой профиль</a>
+            </li>
+            <li class="footer__menu-item menu__item">
+              <a href="#">Мой магазин</a>
+            </li>
+            <li class="footer__menu-item menu__item">
+              <a href="#">Сообщения</a>
+            </li>
+            <li class="footer__menu-item menu__item">
+              <a href="#">Мои объявления</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__second-line">
+        <div class="footer__stat-box">
+          <div class="footer__stat">
+            <span class="footer__stat-item">D:</span><span id="footer__stat-day" class="footer__stat-item">100</span>
+            <span class="footer__stat-item">W:</span><span id="footer__stat-week" class="footer__stat-item">100</span>
+            <span class="footer__stat-item">M:</span><span id="footer__stat-month" class="footer__stat-item">100</span>
+          </div>
+        </div>
+        <ul class="footer__more-buttons menu">
+          <li class="footer__more-item menu__item"><a href="#" class="footer__more-link">Сообщить об ошибке</a></li>
+          <li class="footer__more-item menu__item"><a href="#" class="footer__more-link">Связаться с нами</a></li>
+          <li class="footer__more-item menu__item"><a href="#" class="footer__more-link">Правила сервиса</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+  <!-- footer end ------------------------------------------------------------------------------------- -->
+</body>
+<script type="module" src="scripts/main.js"></script>
+</html>
