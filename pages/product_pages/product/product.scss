@@ -1,6 +1,11 @@
 @import '../../../sass/imports';
 
 // Импорты именно для данной страницы
+@import '../../../sass/blocks/product.scss';
+@import '../../../sass/blocks/product-page';
+@import '../../../sass/blocks/big-product-photo';
+@import '../../../sass/blocks/about-person-menu';
+@import '../../../sass/blocks/person-star';
 
 //Выделения для данной страницы
 .down-menu {
