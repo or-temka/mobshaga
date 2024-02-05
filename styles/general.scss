@@ -1,0 +1,52 @@
+
+
+
+// reset styles
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  font-size: inherit;
+  font-weight: inherit;
+  margin: 0;
+}
+
+// main styles
+* {
+  font-family: $main-font-family;
+  color: $text-color;
+  font-size: var(--simple-text-size, 16px);
+}
+
+body {
+  background-color: $background-color;
+}
+
+.wrapper {
+  width: 1110px;
+  margin: 0 auto;
+}
+
+@media (max-width: 1150px) {
+  .wrapper {
+    width: 93%;
+  }
+}
+
+
+@media (max-width: 576px) {
+  .wrapper {
+    width: 93%;
+  }
+
+  ::-webkit-scrollbar {
+    width: 0;  /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */
+  }
+}
+

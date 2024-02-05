@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Мобщага</title>
+  <link rel="stylesheet" href="source/fonts/rubik/stylesheet.css" type = "text/css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- header ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+  <header class="header">
+    <div class="wrapper header__items">
+      <a href="/">
+        <div class="logo header__logo">
+          <h1 class="h1"><span class="logo__main-color header__logo">М</span>общага</h1>
+        </div>
+      </a>
+      <div class="header__right-panel">
+        <input type="text" class="input input--search header__search" placeholder="Поиск">
+        <ul class="header__menu menu">
+          <li class="header__menu-item menu__item"><a href="#">Магазины</a></li>
+          <li class="header__menu-item menu__item"><a href="#">Поездки</a></li>
+          <li class="header__menu-item menu__item"><a href="#">Вахта</a></li>
+          <li class="header__menu-item menu__item menu__parent">
+            <a href="#" class="menu__parent-text">Торговая площадка</a>
+            <ul class="header__menu-child menu__child">
+              <li class="menu__item menu__item-child"><a href="#">Товары</a></li>
+              <li class="menu__item menu__item-child"><a href="#">Аренда товаров</a></li>
+              <li class="menu__item menu__item-child"><a href="#">Услуги</a></li>
+            </ul>
+          </li>
+          <li class="header__menu-item header__sign-in"><a href="#">Войти</a></li>
+        </ul>
+        <div id="mobileMenuBtn" class="open-menu-btn open-menu-btn--not-active header__mobile-btn">
+          <div class="open-menu-btn__first-line open-menu-btn__line"></div>
+          <div class="open-menu-btn__second-line open-menu-btn__line"></div>
+          <div class="open-menu-btn__third-line open-menu-btn__line"></div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- header end ------------------------------------------------------------------------------------- -->
+
+  <!-- Mobile menu -->
+  <nav id="mobile-menu" class="mobile-menu">
+    <div class="mobile-menu__container">
+      <ul class="menu mobile-menu__menu">
+        <li class="menu__item mobile-menu__menu-item"><a class="mobile-menu__link" href="#">Магазины</a></li>
+        <li class="menu__item mobile-menu__menu-item"><a class="mobile-menu__link" href="#">Поездки</a></li>
+        <li class="menu__item mobile-menu__menu-item"><a class="mobile-menu__link" href="#">Вахта</a></li>
+      </ul>
+      <ul class="menu mobile-menu__menu">
+        <li class="menu__item mobile-menu__menu-item mobile-menu__menu-label"><a class="mobile-menu__link" href="#">Торговая площадка</a></li>
+        <li class="menu__item mobile-menu__menu-item"><a class="mobile-menu__link" href="#">Товары</a></li>
+        <li class="menu__item mobile-menu__menu-item"><a class="mobile-menu__link" href="#">Аренда товаров</a></li>
+        <li class="menu__item mobile-menu__menu-item"><a class="mobile-menu__link" href="#">Услуги</a></li>
+      </ul>
+      <ul class="menu mobile-menu__menu">
+        <li class="menu__item mobile-menu__menu-item mobile-menu__menu-label"><a class="mobile-menu__link" href="#">Добавить</a></li>
+        <li class="menu__item mobile-menu__menu-item"><a class="mobile-menu__link" href="#">Объявление</a></li>
+        <li class="menu__item mobile-menu__menu-item"><a class="mobile-menu__link" href="#">Поездку</a></li>
+        <li class="menu__item mobile-menu__menu-item"><a class="mobile-menu__link" href="#">Свой магазин</a></li>
+      </ul>
+      <ul class="menu mobile-menu__menu">
+        <li class="menu__item mobile-menu__menu-item mobile-menu__menu-label"><a class="mobile-menu__link" href="#">Профиль</a></li>
+        <li class="menu__item mobile-menu__menu-item"><a class="mobile-menu__link" href="#">Мой профиль</a></li>
+        <li class="menu__item mobile-menu__menu-item"><a class="mobile-menu__link" href="#">Сообщения</a></li>
+        <li class="menu__item mobile-menu__menu-item"><a class="mobile-menu__link" href="#">Уведомления</a></li>
+        <li class="menu__item mobile-menu__menu-item"><a class="mobile-menu__link" href="#">Редактировать профиль</a></li>
+        <li class="menu__item mobile-menu__menu-item"><a class="mobile-menu__link" href="#">Выйти из аккаунта</a></li>
+      </ul>
+      <div class="mobile-menu__more-btns">
+        <span class="mobile-menu__more-btn"><a class="mobile-menu__more-link" href="#">Правовые документы</a></span>
+        <span class="mobile-menu__more-btn"><a class="mobile-menu__more-link" href="#">Сообщить об ошибке</a></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- mobile down menu -->
+  <nav class="down-menu">
+
+  </nav>
+
+  <!-- main ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+  <main class="main">
+    <div class="wrapper">
+      <section class="main__section">
+        <!-- main__header -->
+        <div class="main__header">
+          <div class="main__head-line main__head-first-line">
+            <h2 class="h2 main__label">Торговая площадка</h2>
+            <button class="primary-btn primary-btn--with-icon primary-btn--category">Категории</button>
+          </div>
+          <div class="product-sort main__head-line main__sort main__head-second-line">
+            <span class="product-sort__label">Сортировка:</span>
+            <span id="sortByPrice" class="product-sort__text-of-sort">По цене</span>
+            <span id="sortByPopularity" class="product-sort__text-of-sort">По популярности</span>
+            <span id="sortByDate" class="product-sort__text-of-sort">По дате публикации</span>
+          </div>
+        </div>
+        <!-- main content -->
+        <div class="main__content">
+          <div class="marketplace">
+            <div class="marketplace__products">
+              <!-- product -->
+              <div class="product marketplace__product">
+                <a class="product__photo-container">
+                  <img src="source/product_img/f1.jpg" alt="1" class="product__mobile-photo">
+                  <ul class="product__change-photo-box">
+                    <!-- one product photo -->
+                    <li class="product__change-photo-line"></li>
+                    <img src="source/product_img/f1.jpg" alt="1" class="product__img">
+                    <li class="product__change-photo-line"></li>
+                    <img src="source/product_img/a2.jpg" alt="1" class="product__img">
+                    <li class="product__change-photo-line"></li>
+                    <img src="source/product_img/a1.jpg" alt="1" class="product__img">
+                  </ul>
+                </a>
+                <div class="product__info-container">
+                  <h3 class="h3 product__name">Какое-то очень интересное название объявления для такого</h3>
+                  <span class="product__price">5450</span>
+                  <div class="product__more-info">
+                    <h4 class="h4 product__human">Артём Щегорцов</h4>
+                    <div class="product__more-than">
+                      <span class="product__date">12 января 17:43</span>
+                      <span class="product__room">Общ. 5 (5403)</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- product -->
+              <div class="product marketplace__product">
+                <a class="product__photo-container">
+                  <img src="source/product_img/f1.jpg" alt="1" class="product__mobile-photo">
+                  <ul class="product__change-photo-box">
+                    <!-- one product photo -->
+                    <li class="product__change-photo-line"></li>
+                    <img src="source/product_img/f1.jpg" alt="1" class="product__img">
+                    <li class="product__change-photo-line"></li>
+                    <img src="source/product_img/a2.jpg" alt="1" class="product__img">
+                    <li class="product__change-photo-line"></li>
+                    <img src="source/product_img/a1.jpg" alt="1" class="product__img">
+                  </ul>
+                </a>
+                <div class="product__info-container">
+                  <h3 class="h3 product__name">Какое-то очень интересное название объявления для такого</h3>
+                  <span class="product__price">5450</span>
+                  <div class="product__more-info">
+                    <h4 class="h4 product__human">Артём Щегорцов</h4>
+                    <div class="product__more-than">
+                      <span class="product__date">12 января 17:43</span>
+                      <span class="product__room">Общ. 5 (5403)</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- product -->
+              <div class="product marketplace__product">
+                <a class="product__photo-container">
+                  <img src="source/product_img/f1.jpg" alt="1" class="product__mobile-photo">
+                  <ul class="product__change-photo-box">
+                    <!-- one product photo -->
+                    <li class="product__change-photo-line"></li>
+                    <img src="source/product_img/f1.jpg" alt="1" class="product__img">
+                    <li class="product__change-photo-line"></li>
+                    <img src="source/product_img/a2.jpg" alt="1" class="product__img">
+                    <li class="product__change-photo-line"></li>
+                    <img src="source/product_img/a1.jpg" alt="1" class="product__img">
+                  </ul>
+                </a>
+                <div class="product__info-container">
+                  <h3 class="h3 product__name">Какое-то очень интересное название объявления для такого</h3>
+                  <span class="product__price">5450</span>
+                  <div class="product__more-info">
+                    <h4 class="h4 product__human">Артём Щегорцов</h4>
+                    <div class="product__more-than">
+                      <span class="product__date">12 января 17:43</span>
+                      <span class="product__room">Общ. 5 (5403)</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- product -->
+              <div class="product marketplace__product">
+                <a class="product__photo-container">
+                  <img src="source/product_img/f1.jpg" alt="1" class="product__mobile-photo">
+                  <ul class="product__change-photo-box">
+                    <!-- one product photo -->
+                    <li class="product__change-photo-line"></li>
+                    <img src="source/product_img/f1.jpg" alt="1" class="product__img">
+                    <li class="product__change-photo-line"></li>
+                    <img src="source/product_img/a2.jpg" alt="1" class="product__img">
+                    <li class="product__change-photo-line"></li>
+                    <img src="source/product_img/a1.jpg" alt="1" class="product__img">
+                  </ul>
+                </a>
+                <div class="product__info-container">
+                  <h3 class="h3 product__name">Какое-то очень интересное название объявления для такого</h3>
+                  <span class="product__price">5450</span>
+                  <div class="product__more-info">
+                    <h4 class="h4 product__human">Артём Щегорцов</h4>
+                    <div class="product__more-than">
+                      <span class="product__date">12 января 17:43</span>
+                      <span class="product__room">Общ. 5 (5403)</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- product -->
+              <div class="product marketplace__product">
+                <a class="product__photo-container">
+                  <img src="source/product_img/f1.jpg" alt="1" class="product__mobile-photo">
+                  <ul class="product__change-photo-box">
+                    <!-- one product photo -->
+                    <li class="product__change-photo-line"></li>
+                    <img src="source/product_img/f1.jpg" alt="1" class="product__img">
+                    <li class="product__change-photo-line"></li>
+                    <img src="source/product_img/a2.jpg" alt="1" class="product__img">
+                    <li class="product__change-photo-line"></li>
+                    <img src="source/product_img/a1.jpg" alt="1" class="product__img">
+                  </ul>
+                </a>
+                <div class="product__info-container">
+                  <h3 class="h3 product__name">Какое-то очень интересное название объявления для такого</h3>
+                  <span class="product__price">5450</span>
+                  <div class="product__more-info">
+                    <h4 class="h4 product__human">Артём Щегорцов</h4>
+                    <div class="product__more-than">
+                      <span class="product__date">12 января 17:43</span>
+                      <span class="product__room">Общ. 5 (5403)</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button class="next-btn marketplace__also-btn">Показать ещё</button>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+  <!-- main end ------------------------------------------------------------------------------------- -->
+
+  <!-- footer ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+  <footer class="footer">
+    <div class="wrapper">
+      <div class="footer__first-line">
+        <a href="/">
+          <div class="logo">
+            <span class="logo__main-color">М</span>общага
+          </div>
+        </a>
+        <div class="footer__menu">
+          <ul class="footer__menu-column menu">
+            <li class="footer__menu-item footer__menu-main-item menu__item">
+              <a href="#">Торговая площадка</a>
+            </li>
+            <li class="footer__menu-item menu__item">
+              <a href="#">Товары</a>
+            </li>
+            <li class="footer__menu-item menu__item">
+              <a href="#">Аренда товаров</a>
+            </li>
+            <li class="footer__menu-item menu__item">
+              <a href="#">Услуги</a>
+            </li>
+          </ul>
+          <ul class="footer__menu-column menu">
+            <li class="footer__menu-item footer__menu-main-item menu__item">
+              <a href="#">Добавить</a>
+            </li>
+            <li class="footer__menu-item menu__item">
+              <a href="#">Объявление</a>
+            </li>
+            <li class="footer__menu-item menu__item">
+              <a href="#">Поездку</a>
+            </li>
+            <li class="footer__menu-item menu__item">
+              <a href="#">Свой магазин</a>
+            </li>
+          </ul>
+          <ul class="footer__menu-column menu">
+            <li class="footer__menu-item footer__menu-main-item menu__item">
+              <a href="#">Профиль</a>
+            </li>
+            <li class="footer__menu-item menu__item">
+              <a href="#">Мой профиль</a>
+            </li>
+            <li class="footer__menu-item menu__item">
+              <a href="#">Мой магазин</a>
+            </li>
+            <li class="footer__menu-item menu__item">
+              <a href="#">Сообщения</a>
+            </li>
+            <li class="footer__menu-item menu__item">
+              <a href="#">Мои объявления</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__second-line">
+        <div class="footer__stat-box">
+          <div class="footer__stat">
+            <span class="footer__stat-item">D:</span><span id="footer__stat-day" class="footer__stat-item">100</span>
+            <span class="footer__stat-item">W:</span><span id="footer__stat-week" class="footer__stat-item">100</span>
+            <span class="footer__stat-item">M:</span><span id="footer__stat-month" class="footer__stat-item">100</span>
+          </div>
+        </div>
+        <ul class="footer__more-buttons menu">
+          <li class="footer__more-item menu__item"><a href="#" class="footer__more-link">Сообщить об ошибке</a></li>
+          <li class="footer__more-item menu__item"><a href="#" class="footer__more-link">Связаться с нами</a></li>
+          <li class="footer__more-item menu__item"><a href="#" class="footer__more-link">Правила сервиса</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+  <!-- footer end ------------------------------------------------------------------------------------- -->
+</body>
+<script type="module" src="scripts/main.js"></script>
+</html>

@@ -1,0 +1,10 @@
+@mixin simple-shadow { //Простая тень
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.04);
+}
+
+@mixin cut-text($rows) { //Обрезает текст в rows строк и добавляет ...
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: $rows; //Количество строк
+}

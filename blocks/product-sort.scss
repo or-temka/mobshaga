@@ -1,0 +1,52 @@
+.product-sort {
+
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 20px;
+  row-gap: 10px;
+
+  &__label {
+    font-weight: 500;
+  }
+
+  &__text-of-sort {
+    cursor: pointer;
+    user-select: none;
+
+    &:hover {
+      color: $main-color;
+    }
+
+    &::after {
+      content: '';
+      background-image: url('../source/svg/ellipse-not-sorted.svg');
+      display: inline-block;
+      background-repeat: no-repeat;
+      width: 15px;
+      height: 8px;
+      margin-left: 10px;
+    }
+
+    &--up {
+      &::after {
+        background-image: url('../source/svg/treangle.svg');
+        margin-bottom: 2px;
+      }
+    }
+
+    &--down {
+      &::after {
+        background-image: url('../source/svg/treangle.svg');
+        rotate: 180deg;
+        margin-bottom: 2px;
+      }
+    }
+  }
+}
+
+@media (max-width: 930px) {
+  .product-sort {
+    justify-content: left;
+    column-gap: 11px;
+  }
+}

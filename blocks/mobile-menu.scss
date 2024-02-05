@@ -1,0 +1,49 @@
+.mobile-menu {
+
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  background-color: #fff;
+  z-index: 50;
+
+  &__container {
+    margin-left: 3.7%;
+  }
+
+  &__link {
+    &:hover {
+      color: $main-color;
+    }
+  }
+
+  &__menu {
+    margin-top: 20px;
+  }
+
+  &__menu-item {
+    line-height: 22px;
+  }
+
+  &__menu-label {
+    font-weight: 500;
+    line-height: 30px;
+  }
+
+  &__more-btns {
+    margin-top: 24px;
+  }
+
+  &__more-btn {
+    display: block;
+    line-height: 24px;
+  }
+
+  &__more-link {
+    color: $grey-color;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

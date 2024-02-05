@@ -1,0 +1,18 @@
+.input {
+  padding: 10px 14px;
+  padding-right: 38px;
+  border: 1px solid $border-color;
+  border-radius: 5px;
+  width: 200px;
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  outline: none;
+
+  &:hover {
+    background-color: $background-color;
+  }
+  
+  &--search {
+    background-image: url(/source/svg/search.svg);
+  }
+}
