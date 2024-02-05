@@ -1,24 +1,60 @@
 .about-person-menu {
 
+  width: 100%;
+
   // account
   &__account {
+    display: flex;
+    column-gap: 30px;
+    background-color: $background-color;
+    border-radius: 5px;
+    padding: 18px;
+    padding-bottom: 10px;
+  }
 
+  &__account-photo {
+    width: 75px;
+    height: 75px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid $background-color;
+    transition: 0.2s;
+
+    &:hover {
+      border: 3px solid $main-color;
+    }
   }
 
   &__about-account {
-
+    max-width: 273px;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 7px;
   }
 
   &__name {
+    font-size: var(--medium-text-size);
 
+    &:hover {
+      color: $main-color;
+    }
+  }
+
+  &__name-link {
+    width: fit-content;
   }
 
   &__person-info {
-
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 10px;
   }
 
-  &__plae {
-
+  &__place {
+    color: $grey-color;
   }
 
   &__person-stars {
@@ -31,7 +67,9 @@
 
   //contacts
   &__contacts {
-
+    display: flex;
+    flex-direction: column;
+    row-gap: 12px;
   }
 
   &__contact-link {
@@ -39,15 +77,41 @@
   }
 
   &__contact {
+    background-color: $background-color;
+    padding: 16px 23px;
+    border-radius: 5px;
 
+    &:hover {
+      background-color: $border-color;
+    }
   }
 
   &__contact-box {
-
+    display: flex;
+    column-gap: 24px;
+    align-items: center;
   }
 
   &__contact-img {
+    background-repeat: no-repeat;
 
+    &--vk {
+      background-image: url('/source/svg/vk.svg');
+      width: 30px;
+      height: 30px;
+    }
+
+    &--tel {
+      background-image: url('/source/svg/tel.svg');
+      width: 25px;
+      height: 24px;
+    }
+
+    &--msg {
+      background-image: url('/source/svg/msg.svg');
+      width: 29px;
+      height: 24px;
+    }
   }
 
   &__contact-text {

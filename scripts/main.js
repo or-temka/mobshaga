@@ -1,13 +1,8 @@
-import {SortBtns} from './blocks/product-sort.js';
-import {OpenMenuBtn} from './blocks/open-menu-btn.js';
+import { start } from '/scripts/general.js'
+start();
 
-new OpenMenuBtn('mobileMenuBtn', () => {
-  document.getElementById('mobile-menu').style.display = "block";
-  document.body.style.overflow = "hidden";
-}, () => {
-  document.getElementById('mobile-menu').style.display = "none";
-  document.body.style.overflow = "initial";
-});
+import { SortBtns } from '/scripts/blocks/product-sort.js';
+
 
 new SortBtns(
   ['sortByPopularity',

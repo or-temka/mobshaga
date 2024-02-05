@@ -88,7 +88,7 @@ body {
 }
 .menu__parent-text::after {
   content: "";
-  background-image: url("../source/svg/arrow-down.svg");
+  background-image: url("/source/svg/arrow-down.svg");
   display: inline-block;
   background-repeat: no-repeat;
   width: 15px;

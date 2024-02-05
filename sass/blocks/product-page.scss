@@ -1,39 +1,78 @@
 .product-page {
 
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 5px;
+
   //main info -----------------------------------------------------------
   &__main-info {
-
+    display: flex;
+    flex-direction: column;
+    row-gap: 26px;
   }
 
   //big photo
   &__photo-contact {
-
+    display: flex;
+    justify-content: space-between;
   }
 
   &__photo-container {
+    width: 60%;
+    height: 405px;
+  }
 
+  &__big-product-photo {
+    border-radius: 5px;
   }
 
   // person
   &__person-price {
-
+    width: 38%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    row-gap: 29px;
   }
 
   &__big-price {
-
+    color: $main-color;
+    font-size: var(--mega-text-size);
+    font-weight: 500;
+    &::after {
+      content: " ₽"
+    }
   }
 
   &__about-person-menu {
-
+    display: flex;
+    flex-direction: column;
+    row-gap: 22px;
   }
 
   // also photos
   &__also-photos {
-
+    display: flex;
+    column-gap: 14px;
+    flex-wrap: wrap;
+    row-gap: 14px;
   }
 
   &__also-photo {
+    width: 100px;
+    height: 75px;
+    object-fit: cover;
+    border-radius: 5px;
+    cursor: pointer;
+    user-select: none;
 
+    &:hover {
+      outline: 3px solid $main-color;
+    }
+  }
+
+  &__also-photo--active {
+    outline: 3px solid $main-color;
   }
 
   // about -------------------------------------------------------------
@@ -78,6 +117,6 @@
   }
 
   &__similar-products {
-    
+
   }
 }

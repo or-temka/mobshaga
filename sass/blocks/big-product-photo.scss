@@ -1,18 +1,63 @@
 .big-product-photo {
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  height: 405px;
 
   &__photo {
-    
+    height: 405px;
   }
 
   &__btn {
+    width: 100px;
+    position: absolute;
+    height: 405px;
+    background-color: #00000000;
+    transition: 0.2s;
+    
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 15px;
 
+    &:hover {
+      background-color: #00000027;
+    }
+  }
+
+  &__visible-photo {
+    display: flex;
+    justify-content: center;
+    z-index: 2;
+    position: absolute;
+    width: 100%;
+    top: 0;
   }
 
   &__prev-photo-btn {
-
+    left: 0;
+    
+    &:hover {
+      background-image: url('/source/svg/prev-arrow.svg');
+      background-position-x: 40%;
+    }
   }
 
   &__next-photo-btn {
+    right: 0;
+    
+    &:hover {
+      background-image: url('/source/svg/next-arrow.svg');
+      background-position-x: 60%;
+    }
+  }
 
+  &__blur-photo {
+    width: 130%;
+    height: 480px;
+    object-fit: cover;
+    margin-left: -110px;
+    margin-top: -60px;
+    filter: blur(13px);
+    opacity: .8;
   }
 }
