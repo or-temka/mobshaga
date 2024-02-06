@@ -3,19 +3,32 @@ start();
 
 import { ChangerProductPhoto } from '/scripts/blocks/change-product-photo.js';
 
-let blurPhotoId = 'product-photo-blur';
-let bigPhotoId = 'product-photo';
+let blurPhotoClass = 'product-photo-blur';
+let bigPhotoClass = 'product-photo';
 let photos = {};
+
 document.getElementById('photos-of-product').querySelectorAll('.product-page__also-photo').forEach((photoELem) => {
-  let photoId = photoELem.id;
+  let photoClass = photoELem.classList[0];
   let photoSrc = photoELem.getAttribute('src');
-  photos[photoId] = photoSrc;
+  photos[photoClass] = photoSrc;
 })
+
 let photoChanger = new ChangerProductPhoto(
-  bigPhotoId,
-  blurPhotoId,
+  bigPhotoClass,
+  blurPhotoClass,
   photos,
   'product-page__also-photo--active',
   'prevPhotoBtn',
   'nextPhotoBtn'
 );
+
+//Открытие полноразмерного фото товара
+document.getElementById('full-photo-opener').addEventListener('click', () => {
+  document.getElementById('full-product-photo').style.display = "block";
+});
+
+document.querySelectorAll('.closer-full-photo').forEach((closerElem) => {
+  closerElem.addEventListener('click', () => {
+    document.getElementById('full-product-photo').style.display = "none";
+  })
+})
