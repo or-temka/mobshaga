@@ -1,0 +1,29 @@
+.rent-price {
+  width: fit-content;
+
+  &__header {
+    background-color: $border-color;
+    padding: 10px 25px;
+    text-align: center;
+    border-radius: 5px 5px 0 0;
+  }
+
+  &__footer {
+    background-color: $background-color;
+    padding: 8px 30px;
+    text-align: center;
+    border-radius: 0 0 5px 5px;
+  }
+
+  &__price {
+    font-size: var(--bigest-text-size);
+    font-weight: 500;
+    &:after {
+      content: " ₽";
+    }
+  }
+
+  &__time {
+    font-size: var(--medium-text-size);
+  }
+}

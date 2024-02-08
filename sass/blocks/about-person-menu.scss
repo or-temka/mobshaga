@@ -118,3 +118,11 @@
     
   }
 }
+
+@media (max-width: 576px) {
+  .about-person-menu {
+    &__account {
+      column-gap: 15px;
+    }
+  }
+}

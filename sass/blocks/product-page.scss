@@ -35,12 +35,40 @@
     row-gap: 29px;
   }
 
-  &__big-price {
+  &__product-naming {
+    width: 100%;
+    display: none;
+  }
+
+  &__product-naming-box {
+    margin-bottom: 0;
+    margin-top: 10px;
+  }
+
+  
+
+  &__big-price-text {
     color: $main-color;
     font-size: var(--mega-text-size);
     font-weight: 500;
     &::after {
       content: " ₽"
+    }
+  }
+
+  &__price-prefix {
+    font-size: var(--mega-text-size);
+    font-weight: 500;
+  }
+
+  &__price-from {
+    margin-right: 10px;
+  }
+
+  &__during-price {
+    margin-left: 10px;
+    &::before {
+      content: "/ ";
     }
   }
 
@@ -77,7 +105,10 @@
 
   // about -------------------------------------------------------------
   &__about {
-
+    display: flex;
+    flex-direction: column;
+    row-gap: 34px;
+    margin-top: 34px;
   }
 
   &__about-field {
@@ -85,19 +116,37 @@
   }
 
   &__about-label {
+    font-size: var(--big-text-size);
+    font-weight: 500;
+    display: block;
+    margin-bottom: 10px;
+  }
 
+  &__about-rent-prices {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px 15px;
+    margin-top: 15px;
   }
 
   &__about-texts-box {
-
+    display: flex;
+    column-gap: 40px;
+    row-gap: 8px;
+    flex-wrap: wrap;
   }
 
   &__about-text-box {
-
+    display: flex;
+    column-gap: 5px;
+    flex-wrap: wrap;
   }
 
   &__about-type-text {
-
+    color: $grey-color;
+    &::after {
+      content: ":";
+    }
   }
 
   &__about-text-val {
@@ -109,14 +158,96 @@
   }
 
   &__product-small-info {
-
+    display: flex;
+    column-gap: 40px;
+    flex-wrap: wrap;
+    row-gap: 10px;
   }
 
   &__small-info-text {
-
+    color: $grey-color;
   }
 
   &__similar-products {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 10px;
+    row-gap: 15px;
+    margin-top: 20px;
+  }
+}
 
+@media (max-width: 930px) {
+  .product-page {
+    &__photo-contact {
+      flex-direction: column;
+      row-gap: 13px;
+    }
+
+    &__photo-container {
+      width: 100%;
+    }
+
+    &__person-price {
+      width: 100%;
+      align-items: flex-start;
+      row-gap: 8px;
+    }
+
+    &__product-naming {
+      display: block;
+    }
+
+    &__about-person-menu {
+      margin-top: 14px;
+    }
+
+    &__also-photos {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .product-page {
+    padding: 0;
+    border-radius: 5px;
+    background-color: transparent;
+
+    &__price-from {
+      margin-right: 6px;
+    }
+  
+    &__during-price {
+      margin-left: 6px;
+    }  
+
+    &__account {
+      background-color: #fff;
+    }
+
+    &__contact {
+      background-color: #fff;
+    }
+
+    &__photo-contact {
+      
+    }
+
+    &__photo-container {
+      height: 300px;
+    }
+
+    &__big-product-photo {
+      display: none;
+    }
+
+    &__similar-products {
+      
+    }
+
+    &__product {
+      width: 48%;
+    }
   }
 }

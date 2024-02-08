@@ -7,12 +7,19 @@
   <link rel="stylesheet" href="/node_modules/normalize.css/normalize.css" type = "text/css">
   <link rel="stylesheet" href="/source/fonts/rubik/stylesheet.css" type = "text/css">
   <link rel="stylesheet" href="product.css">
+  <link rel="stylesheet" href="/node_modules/swiper/swiper-bundle.min.css">
+  <script src="/node_modules/swiper/swiper-bundle.min.js"></script>
 </head>
 <body>
   <!-- header ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
   <header class="header">
     <div class="wrapper header__items">
-      <a href="/">
+      <a class="header__logo-link-mini" href="/">
+        <div class="logo header__logo">
+          <span class="h1"><span class="logo__main-color header__logo">М</span>о</span>
+        </div>
+      </a>
+      <a class="header__logo-link" href="/">
         <div class="logo header__logo">
           <h1 class="h1"><span class="logo__main-color header__logo">М</span>общага</h1>
         </div>
@@ -123,6 +130,7 @@
     </div>
   </div>
 
+
   <!-- full-product-photo -->
   <div id="full-product-photo" class="full-product-photo">
     <div class="full-product-photo__container">
@@ -151,7 +159,69 @@
         <img class="productPhoto9 full-product-photo__mini-photo" src="/source/product_img/photo3.png" alt="Фото 9">
         <img class="productPhoto10 full-product-photo__mini-photo" src="/source/product_img/photo1.png" alt="Фото 10">
       </div>
-      
+    </div>
+  </div>
+
+  <!-- full-mobile-photo -->
+  <div class="full-mobile-photo">
+    <div class="full-mobile-photo__container">
+      <div class="full-mobile-photo__header">
+        <span class="full-mobile-photo__back-btn">Назад</span>
+        <div class="full-mobile-photo__photo-number-box">
+          <div class="full-mobile-photo__photo-number">
+            <span class="full-mobile-photo__photo-num-text full-mobile-photo__number-of-text">1</span>
+            <span class="full-mobile-photo__max-photo-text full-mobile-photo__number-of-text">10</span>
+          </div>
+        </div>
+      </div>
+      <div class="full-mobile-photo__main">
+        <div class="full-mobile-photo__photo-box">
+          <!-- photo swiper for mobile -->
+          <div class="swiper photo-swiper full-mobile-photo__swiper" pagination="true" pagination-type="fraction">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper photo-swiper__wrapper full-mobile-photo__swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide photo-swiper__slide full-mobile-photo__swiper-slide">
+                <img class="photo-swiper__img full-mobile-photo__swiper-img" src="/source/product_img/photo1.png" alt="Фото 1">
+              </div>
+              <div class="swiper-slide photo-swiper__slide full-mobile-photo__swiper-slide">
+                <img class="photo-swiper__img full-mobile-photo__swiper-img" src="/source/product_img/photo2.png" alt="Фото 2">
+              </div>
+              <div class="swiper-slide photo-swiper__slide full-mobile-photo__swiper-slide">
+                <img class="photo-swiper__img full-mobile-photo__swiper-img" src="/source/product_img/photo3.png" alt="Фото 3">
+              </div>
+              <div class="swiper-slide photo-swiper__slide full-mobile-photo__swiper-slide">
+                <img class="photo-swiper__img full-mobile-photo__swiper-img" src="/source/product_img/photo4.png" alt="Фото 4">
+              </div>
+              <div class="swiper-slide photo-swiper__slide full-mobile-photo__swiper-slide">
+                <img class="photo-swiper__img full-mobile-photo__swiper-img" src="/source/product_img/photo3.png" alt="Фото 5">
+              </div>
+              <div class="swiper-slide photo-swiper__slide full-mobile-photo__swiper-slide">
+                <img class="photo-swiper__img full-mobile-photo__swiper-img" src="/source/product_img/photo2.png" alt="Фото 6">
+              </div>
+              <div class="swiper-slide photo-swiper__slide full-mobile-photo__swiper-slide">
+                <img class="photo-swiper__img full-mobile-photo__swiper-img" src="/source/product_img/photo1.png" alt="Фото 7">
+              </div>
+              <div class="swiper-slide photo-swiper__slide full-mobile-photo__swiper-slide">
+                <img class="photo-swiper__img full-mobile-photo__swiper-img" src="/source/product_img/photo4.png" alt="Фото 8">
+              </div>
+              <div class="swiper-slide photo-swiper__slide full-mobile-photo__swiper-slide">
+                <img class="photo-swiper__img full-mobile-photo__swiper-img" src="/source/product_img/photo3.png" alt="Фото 9">
+              </div>
+              <div class="swiper-slide photo-swiper__slide full-mobile-photo__swiper-slide">
+                <img class="photo-swiper__img full-mobile-photo__swiper-img" src="/source/product_img/photo1.png" alt="Фото 10">
+              </div>
+            </div>
+            <div class="photo-swiper__pagination-container full-mobile-photo__pagination-con">
+              <div class="swiper-pagination photo-swiper__pagination">
+                <span class="swiper-pagination-current"></span>
+                / 
+                <span class="swiper-pagination-total"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 
@@ -168,27 +238,79 @@
         <!-- main content -->
         <div class="main__content">
           <div class="product-page">
+            
             <!-- main info -->
             <div class="product-page__main-info">
               <div class="product-page__photo-contact">
                 <div class="product-page__photo-container">
+                  <!-- photo swiper for mobile -->
+                  <div class="swiper photo-swiper product-page__swiper" pagination="true" pagination-type="fraction">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper photo-swiper__wrapper">
+                      <!-- Slides -->
+                      <div class="swiper-slide photo-swiper__slide">
+                        <img class="photo-swiper__img" src="/source/product_img/photo1.png" alt="Фото 1">
+                      </div>
+                      <div class="swiper-slide photo-swiper__slide">
+                        <img class="photo-swiper__img" src="/source/product_img/photo2.png" alt="Фото 2">
+                      </div>
+                      <div class="swiper-slide photo-swiper__slide">
+                        <img class="photo-swiper__img" src="/source/product_img/photo3.png" alt="Фото 3">
+                      </div>
+                      <div class="swiper-slide photo-swiper__slide">
+                        <img class="photo-swiper__img" src="/source/product_img/photo4.png" alt="Фото 4">
+                      </div>
+                      <div class="swiper-slide photo-swiper__slide">
+                        <img class="photo-swiper__img" src="/source/product_img/photo3.png" alt="Фото 5">
+                      </div>
+                      <div class="swiper-slide photo-swiper__slide">
+                        <img class="photo-swiper__img" src="/source/product_img/photo2.png" alt="Фото 6">
+                      </div>
+                      <div class="swiper-slide photo-swiper__slide">
+                        <img class="photo-swiper__img" src="/source/product_img/photo1.png" alt="Фото 7">
+                      </div>
+                      <div class="swiper-slide photo-swiper__slide">
+                        <img class="photo-swiper__img" src="/source/product_img/photo4.png" alt="Фото 8">
+                      </div>
+                      <div class="swiper-slide photo-swiper__slide">
+                        <img class="photo-swiper__img" src="/source/product_img/photo3.png" alt="Фото 9">
+                      </div>
+                      <div class="swiper-slide photo-swiper__slide">
+                        <img class="photo-swiper__img" src="/source/product_img/photo1.png" alt="Фото 10">
+                      </div>
+                    </div>
+                    <div class="photo-swiper__pagination-container">
+                      <div class="swiper-pagination photo-swiper__pagination">
+                        <span class="swiper-pagination-current"></span>
+                        / 
+                        <span class="swiper-pagination-total"></span>
+                      </div>
+                    </div>
+                  </div>
                   <div class="big-product-photo product-page__big-product-photo">
                     <img src="" class="product-photo-blur big-product-photo__blur-photo"></img>
-                    <!-- <img id="product-photo-blur" src="" class="big-product-photo__blur-photo"></img> -->
                     <div class="big-product-photo__visible-photo">
                       <div class="prevPhotoBtn big-product-photo__prev-photo-btn big-product-photo__btn"></div>
                       <img id="full-photo-opener" class="product-photo big-product-photo__photo" src="" alt="gg">
                       <div class="nextPhotoBtn big-product-photo__next-photo-btn big-product-photo__btn"></div>
-                      <!-- <div id="prevPhotoBtn" class="big-product-photo__prev-photo-btn big-product-photo__btn"></div>
-                      <img id="product-photo" class="big-product-photo__photo" src="" alt="gg">
-                      <div id="nextPhotoBtn" class="big-product-photo__next-photo-btn big-product-photo__btn"></div> -->
                     </div>
                   </div>
                 </div>
                 <div class="product-page__person-price">
-                  <span class="product-page__big-price">5643</span>
+                  <!-- product-naming -->
+                  <div class="product-page__product-naming">
+                    <div class="product-page__product-naming-box main__head-line main__head-first-line">
+                      <span class="h2 main__label">Название товара</span>
+                    </div>
+                  </div>
+
+                  <div class="product-page__big-price">
+                    <span class="product-page__price-from product-page__price-prefix">от</span>
+                    <span class="product-page__big-price-text">5643</span>
+                    <span class="product-page__during-price product-page__price-prefix">час</span>
+                  </div>
                   <div class="about-person-menu product-page__about-person-menu">
-                    <div class="about-person-menu__account">
+                    <div class="about-person-menu__account product-page__account">
                       <a href="#" class="about-person-menu__account-photo-link">
                         <img class="about-person-menu__account-photo" src="/source/profile_img/pf1.png" alt="Имя чела">
                       </a>
@@ -207,7 +329,7 @@
                     </div>
                     <div class="about-person-menu__contacts">
                       <a href="#" class="about-person-menu__contact-link">
-                        <div class="about-person-menu__contact">
+                        <div class="about-person-menu__contact product-page__contact">
                           <div class="about-person-menu__contact-box">
                             <div class="about-person-menu__contact-img about-person-menu__contact-img--vk"></div>
                             <span class="about-person-menu__contact-text">Профиль Вконтакте</span>
@@ -215,7 +337,7 @@
                         </div>
                       </a>
                       <a href="tel:+79201006977" class="about-person-menu__contact-link">
-                        <div class="about-person-menu__contact">
+                        <div class="about-person-menu__contact product-page__contact">
                           <div class="about-person-menu__contact-box">
                             <div class="about-person-menu__contact-img about-person-menu__contact-img--tel"></div>
                             <span class="about-person-menu__contact-text">+79201006977</span>
@@ -223,7 +345,7 @@
                         </div>
                       </a>
                       <a href="#" class="about-person-menu__contact-link">
-                        <div class="about-person-menu__contact">
+                        <div class="about-person-menu__contact product-page__contact">
                           <div class="about-person-menu__contact-box">
                             <div class="about-person-menu__contact-img about-person-menu__contact-img--msg"></div>
                             <span class="about-person-menu__contact-text">Написать сообщение</span>
@@ -246,21 +368,23 @@
                 <img class="productPhoto9 product-page__also-photo" src="/source/product_img/photo3.png" alt="Фото 9">
                 <img class="productPhoto10 product-page__also-photo" src="/source/product_img/photo1.png" alt="Фото 10">
               </div>
-              <!-- <div id="photos-of-product" class="product-page__also-photos">
-                <img id="productPhoto1" class="product-page__also-photo" src="/source/product_img/photo1.png" alt="Фото 1">
-                <img id="productPhoto2" class="product-page__also-photo" src="/source/product_img/photo2.png" alt="Фото 2">
-                <img id="productPhoto3" class="product-page__also-photo" src="/source/product_img/photo3.png" alt="Фото 3">
-                <img id="productPhoto4" class="product-page__also-photo" src="/source/product_img/photo4.png" alt="Фото 4">
-                <img id="productPhoto5" class="product-page__also-photo" src="/source/product_img/photo3.png" alt="Фото 5">
-                <img id="productPhoto6" class="product-page__also-photo" src="/source/product_img/photo2.png" alt="Фото 6">
-                <img id="productPhoto7" class="product-page__also-photo" src="/source/product_img/photo1.png" alt="Фото 7">
-                <img id="productPhoto8" class="product-page__also-photo" src="/source/product_img/photo4.png" alt="Фото 8">
-                <img id="productPhoto9" class="product-page__also-photo" src="/source/product_img/photo3.png" alt="Фото 9">
-                <img id="productPhoto10" class="product-page__also-photo" src="/source/product_img/photo1.png" alt="Фото 10">
-              </div> -->
             </div>
             <!-- about -->
             <div class="product-page__about">
+              <div class="product-page__about-field">
+                <span class="product-page__about-label">Расценка аренды</span>
+                <div class="product-page__about-rent-prices">
+                  <!-- Расценка на аренду одного товара -->
+                  <div class="rent-price product-page__about-rent-price">
+                    <div class="rent-price__header">
+                      <span class="rent-price__price">5400</span>
+                    </div>
+                    <div class="rent-price__footer">
+                      <span class="rent-price__time">1 час</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
               <div class="product-page__about-field">
                 <span class="product-page__about-label">Характеристики</span>
                 <div class="product-page__about-texts-box">
@@ -289,9 +413,10 @@
                 </div>
               </div>
               <div class="product-page__about-field">
+                <span class="product-page__about-label">Товары данного пользователя</span>
                 <div class="product-page__similar-products">
                   <!-- product -->
-                  <div class="product marketplace__product">
+                  <div class="product product-page__product">
                     <a class="product__photo-container" href="pages/product_pages/product/product.html">
                       <img src="/source/product_img/f1.jpg" alt="1" class="product__mobile-photo">
                       <ul class="product__change-photo-box">
@@ -316,7 +441,7 @@
                     </div>
                   </div>
                   <!-- product -->
-                  <div class="product marketplace__product">
+                  <div class="product product-page__product">
                     <a class="product__photo-container" href="pages/product_pages/product/product.html">
                       <img src="/source/product_img/f1.jpg" alt="1" class="product__mobile-photo">
                       <ul class="product__change-photo-box">
@@ -341,7 +466,7 @@
                     </div>
                   </div>
                   <!-- product -->
-                  <div class="product marketplace__product">
+                  <div class="product product-page__product">
                     <a class="product__photo-container" href="pages/product_pages/product/product.html">
                       <img src="/source/product_img/f1.jpg" alt="1" class="product__mobile-photo">
                       <ul class="product__change-photo-box">
@@ -366,7 +491,7 @@
                     </div>
                   </div>
                   <!-- product -->
-                  <div class="product marketplace__product">
+                  <div class="product product-page__product">
                     <a class="product__photo-container" href="pages/product_pages/product/product.html">
                       <img src="/source/product_img/f1.jpg" alt="1" class="product__mobile-photo">
                       <ul class="product__change-photo-box">
@@ -391,7 +516,7 @@
                     </div>
                   </div>
                   <!-- product -->
-                  <div class="product marketplace__product">
+                  <div class="product product-page__product">
                     <a class="product__photo-container" href="pages/product_pages/product/product.html">
                       <img src="/source/product_img/f1.jpg" alt="1" class="product__mobile-photo">
                       <ul class="product__change-photo-box">

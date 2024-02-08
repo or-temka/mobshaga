@@ -2,11 +2,14 @@
 
 // Импорты именно для данной страницы
 @import '../../../sass/blocks/product.scss';
-@import '../../../sass/blocks/product-page';
 @import '../../../sass/blocks/big-product-photo';
 @import '../../../sass/blocks/about-person-menu';
+@import '../../../sass/blocks/product-page';
 @import '../../../sass/blocks/person-star';
 @import '../../../sass/blocks/full-product-photo';
+@import '../../../sass/blocks/photo-swiper';
+@import '../../../sass/blocks/rent-price';
+@import '../../../sass/blocks/full-mobile-photo';
 
 //Выделения для данной страницы
 .down-menu {
@@ -16,5 +19,12 @@
 
   &__btn-label--search {
     color: $main-color;
+  }
+}
+
+//Убираем лишнее
+@media (max-width: 930px) {
+  .main__header {
+    display: none;
   }
 }
