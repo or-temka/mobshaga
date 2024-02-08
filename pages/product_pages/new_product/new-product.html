@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Мобщага</title>
+  <title>Создание объявления | Мобщага</title>
   <link rel="apple-touch-icon" sizes="180x180" href="/source/icons/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/source/icons/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/source/icons/favicon-16x16.png">
   <link rel="manifest" href="/source/icons/site.webmanifest">
   <link rel="stylesheet" href="/node_modules/normalize.css/normalize.css" type = "text/css">
   <link rel="stylesheet" href="/source/fonts/rubik/stylesheet.css" type = "text/css">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="new-product.css">
 </head>
 <body>
   <!-- header ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
@@ -33,7 +33,7 @@
           <li class="header__menu-item menu__item"><a href="#">Поездки</a></li>
           <li class="header__menu-item menu__item"><a href="#">Вахта</a></li>
           <li class="header__menu-item menu__item menu__parent">
-            <a href="#" class="menu__parent-text menu__parent-arrow">Торговая площадка</a>
+            <a href="#" class="menu__parent-text">Торговая площадка</a>
             <ul class="header__menu-child menu__child">
               <li class="menu__item menu__item-child"><a href="#">Товары</a></li>
               <li class="menu__item menu__item-child"><a href="#">Аренда товаров</a></li>
@@ -41,28 +41,6 @@
             </ul>
           </li>
           <li class="header__menu-item header__sign-in"><a href="#">Войти</a></li>
-          <li style="display: none;" class="header__menu-item header__messanger">
-            <a href="#">
-              <svg class="header__messanger-svg" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path class="header__messanger-svg-path" d="M21.6 1.21378e-06H2.4C1.0764 1.21378e-06 0 1.0728 0 2.3904V16.8096C0 18.1272 1.0764 19.2 2.4 19.2H6V24L13.6212 19.2H21.6C22.9236 19.2 24 18.1272 24 16.8096V2.3904C23.9981 1.75535 23.7443 1.147 23.2944 0.698847C22.8444 0.250697 22.2351 -0.000637338 21.6 1.21378e-06Z" fill="#333333"/>
-              </svg>
-              <div class="header__messanger-new-msgs">
-                <span class="header__messanger-new-msgs-text">10</span>
-              </div>
-            </a>
-          </li>
-          <li style="display: none;" class="header__menu-item menu__item menu__parent header__menu-item-profile">
-            <a href="#" class="menu__parent-text">
-              <img class="header__profile-img" src="/source/profile_img/pf1.png" alt="Фотография профиля Артём Щегорцов">
-            </a>
-            <ul class="header__menu-child header__menu-child--profile menu__child">
-              <li class="menu__item menu__item-child"><a href="#">Профиль</a></li>
-              <li class="menu__item menu__item-child"><a href="#">Редактировать профиль</a></li>
-              <li class="menu__item menu__item-child"><a href="#">Сообщения</a></li>
-              <li class="menu__item menu__item-child"><a href="#">Уведомления</a></li>
-              <li class="menu__item menu__item-child"><a href="#">Выйти</a></li>
-            </ul>
-          </li>
         </ul>
         <div id="mobileMenuBtn" class="open-menu-btn open-menu-btn--not-active header__mobile-btn">
           <div class="open-menu-btn__first-line open-menu-btn__line"></div>
@@ -138,7 +116,7 @@
       </a>
       <a href="#">
         <div class="down-menu__btn down-menu__profile-btn">
-          <img src="source/profile_img/pf1.png" alt="1" class="down-menu__profile-img">
+          <img src="../../../source/profile_img/pf1.png" alt="1" class="down-menu__profile-img">
           <span class="down-menu__btn-label">Профиль</span>
         </div>
       </a>
@@ -149,7 +127,7 @@
   <div class="pop-up-msg">
     <div class="pop-up-msg__container">
       <span class="pop-up-msg__msg">Какое-то сообщение</span>
-      <img class="pop-up-msg__warning-img" src="source/svg/warning.svg" alt="Внимание">
+      <img class="pop-up-msg__warning-img" src="/source/svg/warning.svg" alt="Внимание">
       <button class="primary-btn pop-up-msg__btn">Хорошо</button>
     </div>
   </div>
@@ -161,149 +139,13 @@
         <!-- main__header -->
         <div class="main__header">
           <div class="main__head-line main__head-first-line">
-            <h2 class="h2 main__label">Торговая площадка</h2>
-            <button class="primary-btn primary-btn--with-icon primary-btn--category">Категории</button>
-          </div>
-          <div class="product-sort main__head-line main__sort main__head-second-line">
-            <span class="product-sort__label">Сортировка:</span>
-            <span id="sortByPrice" class="product-sort__text-of-sort">По цене</span>
-            <span id="sortByPopularity" class="product-sort__text-of-sort">По популярности</span>
-            <span id="sortByDate" class="product-sort__text-of-sort">По дате публикации</span>
+            <h2 class="h2 main__label">Создание объявления</h2>
           </div>
         </div>
         <!-- main content -->
         <div class="main__content">
-          <div class="marketplace">
-            <div class="marketplace__products">
-              <!-- product -->
-              <div class="product marketplace__product">
-                <a class="product__photo-container" href="pages/product_pages/product/product.html">
-                  <img src="source/product_img/f1.jpg" alt="1" class="product__mobile-photo">
-                  <ul class="product__change-photo-box">
-                    <li class="product__change-photo-line"></li>
-                    <img src="source/product_img/f1.jpg" alt="1" class="product__img">
-                    <li class="product__change-photo-line"></li>
-                    <img src="source/product_img/a2.jpg" alt="1" class="product__img">
-                    <li class="product__change-photo-line"></li>
-                    <img src="source/product_img/a1.jpg" alt="1" class="product__img">
-                  </ul>
-                </a>
-                <div class="product__info-container">
-                  <h3 class="h3"><a class="product__name" href="pages/product_pages/product/product.html">Какое-то очень интересное название объявления для такого</a></h3>
-                  <span class="product__price">5450</span>
-                  <div class="product__more-info">
-                    <h4 class="h4"><a class="product__human" href="#">Артём Щегорцов</a></h4>
-                    <div class="product__more-than">
-                      <span class="product__date">12 января 17:43</span>
-                      <span class="product__room">Общ. 5 (5403)</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- product -->
-              <div class="product marketplace__product">
-                <a class="product__photo-container">
-                  <img src="source/product_img/f1.jpg" alt="1" class="product__mobile-photo">
-                  <ul class="product__change-photo-box">
-                    <li class="product__change-photo-line"></li>
-                    <img src="source/product_img/f1.jpg" alt="1" class="product__img">
-                    <li class="product__change-photo-line"></li>
-                    <img src="source/product_img/a2.jpg" alt="1" class="product__img">
-                    <li class="product__change-photo-line"></li>
-                    <img src="source/product_img/a1.jpg" alt="1" class="product__img">
-                  </ul>
-                </a>
-                <div class="product__info-container">
-                  <h3 class="h3"><a class="product__name" href="#">Какое-то очень интересное название объявления для такого</a></h3>
-                  <span class="product__price">5450</span>
-                  <div class="product__more-info">
-                    <h4 class="h4"><a class="product__human" href="#">Артём Щегорцов</a></h4>
-                    <div class="product__more-than">
-                      <span class="product__date">12 января 17:43</span>
-                      <span class="product__room">Общ. 5 (5403)</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- product -->
-              <div class="product marketplace__product">
-                <a class="product__photo-container">
-                  <img src="source/product_img/f1.jpg" alt="1" class="product__mobile-photo">
-                  <ul class="product__change-photo-box">
-                    <li class="product__change-photo-line"></li>
-                    <img src="source/product_img/f1.jpg" alt="1" class="product__img">
-                    <li class="product__change-photo-line"></li>
-                    <img src="source/product_img/a2.jpg" alt="1" class="product__img">
-                    <li class="product__change-photo-line"></li>
-                    <img src="source/product_img/a1.jpg" alt="1" class="product__img">
-                  </ul>
-                </a>
-                <div class="product__info-container">
-                  <h3 class="h3"><a class="product__name" href="#">Какое-то очень интересное название объявления для такого</a></h3>
-                  <span class="product__price">5450</span>
-                  <div class="product__more-info">
-                    <h4 class="h4"><a class="product__human" href="#">Артём Щегорцов</a></h4>
-                    <div class="product__more-than">
-                      <span class="product__date">12 января 17:43</span>
-                      <span class="product__room">Общ. 5 (5403)</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- product -->
-              <div class="product marketplace__product">
-                <a class="product__photo-container">
-                  <img src="source/product_img/f1.jpg" alt="1" class="product__mobile-photo">
-                  <ul class="product__change-photo-box">
-                    <li class="product__change-photo-line"></li>
-                    <img src="source/product_img/f1.jpg" alt="1" class="product__img">
-                    <li class="product__change-photo-line"></li>
-                    <img src="source/product_img/a2.jpg" alt="1" class="product__img">
-                    <li class="product__change-photo-line"></li>
-                    <img src="source/product_img/a1.jpg" alt="1" class="product__img">
-                  </ul>
-                </a>
-                <div class="product__info-container">
-                  <h3 class="h3"><a class="product__name" href="#">Какое-то очень интересное название объявления для такого</a></h3>
-                  <span class="product__price">5450</span>
-                  <div class="product__more-info">
-                    <h4 class="h4"><a class="product__human" href="#">Артём Щегорцов</a></h4>
-                    <div class="product__more-than">
-                      <span class="product__date">12 января 17:43</span>
-                      <span class="product__room">Общ. 5 (5403)</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- product -->
-              <div class="product marketplace__product">
-                <a class="product__photo-container">
-                  <img src="source/product_img/f1.jpg" alt="1" class="product__mobile-photo">
-                  <ul class="product__change-photo-box">
-                    <li class="product__change-photo-line"></li>
-                    <img src="source/product_img/f1.jpg" alt="1" class="product__img">
-                    <li class="product__change-photo-line"></li>
-                    <img src="source/product_img/a2.jpg" alt="1" class="product__img">
-                    <li class="product__change-photo-line"></li>
-                    <img src="source/product_img/a1.jpg" alt="1" class="product__img">
-                  </ul>
-                </a>
-                <div class="product__info-container">
-                  <h3 class="h3"><a class="product__name" href="#">Какое-то очень интересное название объявления для такого</a></h3>
-                  <span class="product__price">5450</span>
-                  <div class="product__more-info">
-                    <h4 class="h4"><a class="product__human" href="#">Артём Щегорцов</a></h4>
-                    <div class="product__more-than">
-                      <span class="product__date">12 января 17:43</span>
-                      <span class="product__room">Общ. 5 (5403)</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              </div>
-            </div>
-            <button class="next-btn marketplace__also-btn">Показать ещё</button>
-          </div>
+          
+
         </div>
       </section>
     </div>
@@ -339,7 +181,7 @@
               <a href="#">Добавить</a>
             </li>
             <li class="footer__menu-item menu__item">
-              <a href="/pages/product_pages/new_product/new-product.html">Объявление</a>
+              <a href="#">Объявление</a>
             </li>
             <li class="footer__menu-item menu__item">
               <a href="#">Поездку</a>
@@ -385,5 +227,5 @@
   </footer>
   <!-- footer end ------------------------------------------------------------------------------------- -->
 </body>
-<script type="module" src="scripts/main.js"></script>
+<script type="module" src="main.js"></script>
 </html>

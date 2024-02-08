@@ -23,7 +23,7 @@
     }
   }
 
-  &__parent-text {
+  &__parent-arrow {
     &::after {
       content: '';
       background-image: url('/source/svg/arrow-down.svg');
@@ -33,12 +33,10 @@
       height: 8px;
       margin-left: 10px;
     }
+  }
 
-    &--opened {
-      &::after {
-        rotate: 180deg;
-      }
-    }
+  &__parent-text {
+    
   }
 
   &__child {
@@ -49,6 +47,7 @@
     border-radius: 5px;
     padding-right: 35px;
     padding-top: 40px;
+    z-index: 50;
   }
 
   &__item-child {

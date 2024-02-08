@@ -1,0 +1,15 @@
+@import '../../../sass/imports';
+
+// Импорты именно для данной страницы
+
+
+//Выделения для данной страницы
+.down-menu {
+  &__svg-img--ads {
+    color: $main-color;
+  }
+
+  &__btn-label--ads {
+    color: $main-color;
+  }
+}
