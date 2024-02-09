@@ -3,7 +3,6 @@
   padding-right: 38px;
   border: 1px solid $border-color;
   border-radius: 5px;
-  width: 200px;
   background-repeat: no-repeat;
   background-position: right 10px center;
   outline: none;
@@ -14,5 +13,26 @@
   
   &--search {
     background-image: url(/source/svg/search.svg);
+  }
+
+  &--file {
+    display: none;
+  }
+
+  &--label-for-file {
+    display: block;
+    background-color: #fff;
+    border: 1px solid $border-color;
+    border-radius: 5px;
+    padding: 10px 15px;
+    color: $grey-color;
+    background-image: url('/source/svg/upload-image.svg');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    cursor: pointer;
+    &:hover {
+      background-color: $background-color;
+      color: $text-color;
+    }
   }
 }

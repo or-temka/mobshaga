@@ -114,7 +114,6 @@ body {
   padding-right: 38px;
   border: 1px solid #CED4DA;
   border-radius: 5px;
-  width: 200px;
   background-repeat: no-repeat;
   background-position: right 10px center;
   outline: none;
@@ -124,6 +123,25 @@ body {
 }
 .input--search {
   background-image: url(/source/svg/search.svg);
+}
+.input--file {
+  display: none;
+}
+.input--label-for-file {
+  display: block;
+  background-color: #fff;
+  border: 1px solid #CED4DA;
+  border-radius: 5px;
+  padding: 10px 15px;
+  color: #828282;
+  background-image: url("/source/svg/upload-image.svg");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  cursor: pointer;
+}
+.input--label-for-file:hover {
+  background-color: #F9F9F9;
+  color: #333333;
 }
 
 .open-menu-btn {
@@ -214,6 +232,14 @@ body {
 }
 .primary-btn--category {
   background-image: url("../source/svg/category.svg");
+}
+.primary-btn--grey {
+  background-color: #CED4DA;
+  color: #333333;
+}
+.primary-btn--grey:hover {
+  background-color: #333333;
+  color: #fff;
 }
 
 .header {

@@ -1,7 +1,12 @@
 @import '../../../sass/imports';
 
 // Импорты именно для данной страницы
-
+@import '../../../sass/blocks/textarea';
+@import '../../../sass/blocks/new-product-page';
+@import '../../../sass/blocks/data-edit';
+@import '../../../sass/blocks/select';
+@import '../../../sass/blocks/uploaded-imgs';
+@import '../../../sass/blocks/checkbox';
 
 //Выделения для данной страницы
 .down-menu {

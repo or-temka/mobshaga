@@ -113,7 +113,6 @@ body {
   padding-right: 38px;
   border: 1px solid #CED4DA;
   border-radius: 5px;
-  width: 200px;
   background-repeat: no-repeat;
   background-position: right 10px center;
   outline: none;
@@ -123,6 +122,25 @@ body {
 }
 .input--search {
   background-image: url(/source/svg/search.svg);
+}
+.input--file {
+  display: none;
+}
+.input--label-for-file {
+  display: block;
+  background-color: #fff;
+  border: 1px solid #CED4DA;
+  border-radius: 5px;
+  padding: 10px 15px;
+  color: #828282;
+  background-image: url("/source/svg/upload-image.svg");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  cursor: pointer;
+}
+.input--label-for-file:hover {
+  background-color: #F9F9F9;
+  color: #333333;
 }
 
 .open-menu-btn {
@@ -213,6 +231,14 @@ body {
 }
 .primary-btn--category {
   background-image: url("../source/svg/category.svg");
+}
+.primary-btn--grey {
+  background-color: #CED4DA;
+  color: #333333;
+}
+.primary-btn--grey:hover {
+  background-color: #333333;
+  color: #fff;
 }
 
 .header {
@@ -603,6 +629,50 @@ body {
     width: 80%;
   }
 }
+.textarea {
+  border: 1px solid #CED4DA;
+  border-radius: 5px;
+  outline: none;
+  padding: 10px;
+  resize: none;
+  width: 100%;
+  height: 100px;
+}
+
+.checkbox__input {
+  display: none;
+}
+.checkbox__input:checked + .checkbox__label::before {
+  background-color: #7000FF;
+  background-image: url("/source/svg/checkbox-tick.svg");
+  border: 1px solid #7000FF;
+}
+.checkbox__label {
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.checkbox__label:hover::before {
+  background-color: #F9F9F9;
+}
+.checkbox__label::before {
+  content: "";
+  display: block;
+  width: 15px;
+  height: 15px;
+  border: 1px solid #CED4DA;
+  border-radius: 5px;
+  background-color: #fff;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-right: 8px;
+}
+
 .down-menu__svg-img--ads {
   color: #7000FF;
 }

@@ -20,4 +20,14 @@
   &--category {
     background-image: url('../source/svg/category.svg');
   }
+
+  &--grey {
+    background-color: $border-color;
+    color: $text-color;
+
+    &:hover {
+      background-color: $text-color;
+      color: #fff;
+    }
+  }
 }
