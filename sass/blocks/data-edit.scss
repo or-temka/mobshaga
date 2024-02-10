@@ -1,19 +1,47 @@
 .data-edit {
 
-  &__field-container {
-
-  }
+  display: flex;
+  flex-direction: column;
+  row-gap: 25px;
 
   &__hint {
-
+    color: $grey-color;
   }
 
-  &__field-label-container {
+  &__main-label-container {
+    margin-bottom: -10px;
+  }
 
+  &__main-label-field {
+    font-weight: 500;
+  }
+
+  &__field-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    &--right-align {
+      display: flex;
+      justify-content: flex-end;
+    }
   }
 
   &__input-field {
 
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    &--full-field {
+      width: 100%;
+    }
+  }
+
+  &__field-label-container {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
   }
 
   &__input-text {
@@ -23,7 +51,10 @@
   &__input-label {
 
     &--necessarily {
-
+      &::after {
+        content: " *";
+        color: $main-color;
+      }
     }
   }
 
@@ -41,6 +72,33 @@
 
   &__select {
 
+  }
+
+  &__del-btns {
+    margin-left: -10px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 28.39px;
+  }
+
+  &__del-btn-container {
+    height: 40.39px;
+    display: flex;
+    align-items: center;
+  }
+
+  &__del-field-btn {
+    width: 25px;
+    height: 25px;
+    background-color: $border-color;
+    border-radius: 5px;
+    background-image: url("/source/svg/cross.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    &:hover {
+      background-color: $text-color;
+    }
   }
 
   &__option {

@@ -1,4 +1,16 @@
 .select {
+  appearance: none;
+  padding: 10px 15px;
+  padding-right: 50px;
+  border: 1px solid $border-color;
+  border-radius: 5px;
+  box-sizing: border-box;
+
+  background-image: url("/source/svg/arrow-down.svg");
+  background-repeat: no-repeat;
+  background-position: right 20px center;
+
+  width: 100%;
 
   &__option {
     

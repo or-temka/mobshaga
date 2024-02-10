@@ -1,11 +1,15 @@
 .new-product-page {
 
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 25px;
+
   &__container {
 
   }
 
   &__fields-container {
-
+    
   }
 
   &__hint {
@@ -13,12 +17,27 @@
   }
 
   &__input-field {
-
+    &--product-name, &--type-of-product {
+      width: 100%;
+    }
+    &--in-stock {
+      width: 120px;
+    }
   }
 
   &__input-label {
 
   }
 
+  &__input {
+    &--product-name {
+      width: 100%;
+      box-sizing: border-box;
+    }
+  }
+
+  &__ad-done-btn {
+    display: block;
+  }
   
 }

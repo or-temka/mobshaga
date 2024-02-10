@@ -152,20 +152,20 @@
                 </span>
               </div>
               <div class="new-product-page__fields-container data-edit__field-container">
-                <div class="new-product-page__input-field data-edit__input-field">
+                <div class="new-product-page__input-field new-product-page__input-field--product-name data-edit__input-field">
                   <div class="data-edit__field-label-container">
                     <span class="new-product-page__input-label data-edit__input-label data-edit__input-label--necessarily">
                       Название объявления (Товара)
                     </span>
                   </div>
-                  <input class="data-edit__input-text input" type="text" placeholder="Название">
+                  <input class="new-product-page__input new-product-page__input--product-name data-edit__input-text input" type="text" placeholder="Название">
                 </div>
               </div>
               <div class="new-product-page__fields-container data-edit__field-container">
                 <div class="new-product-page__input-field data-edit__input-field">
                   <div class="data-edit__field-label-container">
                     <span class="new-product-page__input-label data-edit__input-label data-edit__input-label--necessarily">
-                      Цена
+                      Цена, р.
                     </span>
                     <div class="data-edit__checkbox-container checkbox">
                       <input class="data-edit__checkbox checkbox__input" id="checkbox-for-free" type="checkbox">
@@ -210,7 +210,7 @@
                 <div class="new-product-page__input-field data-edit__input-field">
                   <div class="data-edit__uploaded-imgs uploaded-imgs">
                     <div class="data-edit__uploaded-img-container uploaded-imgs__img-container">
-                      <img class="data-edit__uploaded-img uploaded-imgs__img" src="" alt="Загруженное изображение 1">
+                      <img class="data-edit__uploaded-img uploaded-imgs__img" src="/source/product_img/photo3.png" alt="Загруженное изображение 1">
                       <div class="data-edit__uploaded-img-del-btn uploaded-imgs__del-img-btn"></div>
                       <div class="data-edit__main-photo-label uploaded-imgs__main-photo-label">
                         <span class="data-edit__main-photo-label-text uploaded-imgs__main-photo-label-text">
@@ -219,15 +219,15 @@
                       </div>
                     </div>
                     <div class="data-edit__uploaded-img-container uploaded-imgs__img-container">
-                      <img class="data-edit__uploaded-img uploaded-imgs__img" src="" alt="Загруженное изображение 2">
+                      <img class="data-edit__uploaded-img uploaded-imgs__img" src="/source/product_img/a1.jpg" alt="Загруженное изображение 2">
                       <div class="data-edit__uploaded-img-del-btn uploaded-imgs__del-img-btn"></div>
                     </div>
                     <div class="data-edit__uploaded-img-container uploaded-imgs__img-container">
-                      <img class="data-edit__uploaded-img uploaded-imgs__img" src="" alt="Загруженное изображение 3">
+                      <img class="data-edit__uploaded-img uploaded-imgs__img" src="/source/product_img/f2.jpg" alt="Загруженное изображение 3">
                       <div class="data-edit__uploaded-img-del-btn uploaded-imgs__del-img-btn"></div>
                     </div>
                     <div class="data-edit__uploaded-img-container uploaded-imgs__img-container">
-                      <img class="data-edit__uploaded-img uploaded-imgs__img" src="" alt="Загруженное изображение 4">
+                      <img class="data-edit__uploaded-img uploaded-imgs__img" src="/source/product_img/photo1.png" alt="Загруженное изображение 4">
                       <div class="data-edit__uploaded-img-del-btn uploaded-imgs__del-img-btn"></div>
                     </div>
                   </div>
@@ -245,7 +245,7 @@
                     <option class="data-edit__option select__option" value="old">Б/у</option>
                   </select>
                 </div>
-                <div class="new-product-page__input-field data-edit__input-field">
+                <div class="new-product-page__input-field data-edit__input-field new-product-page__input-field--in-stock">
                   <div class="data-edit__field-label-container">
                     <span class="new-product-page__input-label data-edit__input-label">
                       В наличии (шт.)
@@ -253,7 +253,7 @@
                   </div>
                   <input class="data-edit__input-text input" type="text" value="1">
                 </div>
-                <div class="new-product-page__input-field data-edit__input-field">
+                <div class="new-product-page__input-field data-edit__input-field new-product-page__input-field--type-of-product">
                   <div class="data-edit__field-label-container">
                     <span class="new-product-page__input-label data-edit__input-label data-edit__input-label--necessarily">
                       Тип товара
@@ -270,51 +270,28 @@
                   </select>
                 </div>
               </div>
+              <div class="new-product-page__field-container data-edit__field-container data-edit__main-label-container">
+                <span class="new-product-page__main-label-field data-edit__main-label-field">
+                  Расценки аренды:
+                </span>
+              </div>
               <!-- add time-price for rent -->
               <div class="new-product-page__fields-container data-edit__field-container">
-                <div class="new-product-page__input-field data-edit__input-field">
+                <div id="price-rent-inputs" class="new-product-page__input-field data-edit__input-field">
                   <div class="data-edit__field-label-container">
                     <span class="new-product-page__input-label data-edit__input-label data-edit__input-label--necessarily">
-                      Цена
+                      Цена, р.
                     </span>
                   </div>
-                  <input class="data-edit__input-text input" type="text" placeholder="Название">
-                  <input class="data-edit__input-text input" type="text" placeholder="Название">
-                  <input class="data-edit__input-text input" type="text" placeholder="Название">
+                  <input id="price-rent-price-1" class="data-edit__input-text input" type="text" placeholder="Цена в рублях">
                 </div>
-                <div class="new-product-page__input-field data-edit__input-field">
+                <div id="price-rent-selects" class="new-product-page__input-field data-edit__input-field">
                   <div class="data-edit__field-label-container">
                     <span class="new-product-page__input-label data-edit__input-label data-edit__input-label--necessarily">
                       За какое время
                     </span>
                   </div>
-                  <select class="data-edit__select select">
-                    <option data-time-rent="1hour" class="data-edit__option select__option" value="1hour" selected>1 час</option>
-                    <option data-time-rent="2hours" class="data-edit__option select__option" value="2hours">2 часа</option>
-                    <option data-time-rent="12hours" class="data-edit__option select__option" value="12hours">12 часов</option>
-                    <option data-time-rent="1day" class="data-edit__option select__option" value="1day">1 день</option>
-                    <option data-time-rent="2days" class="data-edit__option select__option" value="2days">2 дня</option>
-                    <option data-time-rent="3days" class="data-edit__option select__option" value="3days">3 дня</option>
-                    <option data-time-rent="4days" class="data-edit__option select__option" value="4days">4 дня</option>
-                    <option data-time-rent="5days" class="data-edit__option select__option" value="5days">5 дней</option>
-                    <option data-time-rent="1week" class="data-edit__option select__option" value="1week">1 неделя</option>
-                    <option data-time-rent="2weeks" class="data-edit__option select__option" value="2weeks">2 недели</option>
-                    <option data-time-rent="1month" class="data-edit__option select__option" value="1month">1 месяц</option>
-                  </select>
-                  <select class="data-edit__select select">
-                    <option data-time-rent="1hour" class="data-edit__option select__option" value="1hour" selected>1 час</option>
-                    <option data-time-rent="2hours" class="data-edit__option select__option" value="2hours">2 часа</option>
-                    <option data-time-rent="12hours" class="data-edit__option select__option" value="12hours">12 часов</option>
-                    <option data-time-rent="1day" class="data-edit__option select__option" value="1day">1 день</option>
-                    <option data-time-rent="2days" class="data-edit__option select__option" value="2days">2 дня</option>
-                    <option data-time-rent="3days" class="data-edit__option select__option" value="3days">3 дня</option>
-                    <option data-time-rent="4days" class="data-edit__option select__option" value="4days">4 дня</option>
-                    <option data-time-rent="5days" class="data-edit__option select__option" value="5days">5 дней</option>
-                    <option data-time-rent="1week" class="data-edit__option select__option" value="1week">1 неделя</option>
-                    <option data-time-rent="2weeks" class="data-edit__option select__option" value="2weeks">2 недели</option>
-                    <option data-time-rent="1month" class="data-edit__option select__option" value="1month">1 месяц</option>
-                  </select>
-                  <select class="data-edit__select select">
+                  <select id="price-rent-time-1" class="data-edit__select select">
                     <option data-time-rent="1hour" class="data-edit__option select__option" value="1hour" selected>1 час</option>
                     <option data-time-rent="2hours" class="data-edit__option select__option" value="2hours">2 часа</option>
                     <option data-time-rent="12hours" class="data-edit__option select__option" value="12hours">12 часов</option>
@@ -328,12 +305,15 @@
                     <option data-time-rent="1month" class="data-edit__option select__option" value="1month">1 месяц</option>
                   </select>
                 </div>
+                <div id="price-rent-del-btns" class="new-product-page__input-field data-edit__input-field data-edit__del-btns">
+                  <div class="data-edit__del-btn-container"></div>
+                </div>
               </div>
               <div class="new-product-page__fields-container data-edit__field-container">
-                <button class="primary-btn primary-btn--grey">Добавить ещё</button>
+                <button id="more-price-rent-fields-btn" class="primary-btn primary-btn--grey">+ Расценка</button>
               </div>
               <div class="new-product-page__fields-container data-edit__field-container">
-                <div class="new-product-page__input-field data-edit__input-field">
+                <div class="new-product-page__input-field data-edit__input-field data-edit__input-field--full-field">
                   <div class="data-edit__field-label-container">
                     <span class="new-product-page__input-label data-edit__input-label">
                       Описание
@@ -343,7 +323,7 @@
                 </div>
               </div>
               <div class="new-product-page__fields-container data-edit__field-container data-edit__field-container--right-align">
-                <button class="primary-btn">Разместить объявление</button>
+                <button class="primary-btn new-product-page__ad-done-btn">Разместить объявление</button>
               </div>
             </div>
           </div>
