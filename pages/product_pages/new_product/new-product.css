@@ -46,6 +46,12 @@ body {
   margin: 0 auto;
 }
 
+.selected {
+  border: 3px solid #7000FF;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 @media (max-width: 1150px) {
   .wrapper {
     width: 93%;
@@ -664,6 +670,26 @@ body {
   display: block;
 }
 
+@media (max-width: 576px) {
+  .new-product-page {
+    padding: 0;
+    background-color: transparent;
+  }
+  .new-product-page__input-field--price-inputs > input {
+    width: 100px;
+  }
+}
+@media (max-width: 360px) {
+  .new-product-page__input-field--price-inputs > input {
+    width: 70px;
+  }
+  .new-product-page__fields-container--rent-prices {
+    gap: 7px !important;
+  }
+  .new-product-page--del-rent-btn {
+    margin-left: 10px;
+  }
+}
 .data-edit {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -773,10 +799,14 @@ body {
   border-radius: 5px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  background-color: #fff;
   background-image: url("/source/svg/arrow-down.svg");
   background-repeat: no-repeat;
   background-position: right 20px center;
   width: 100%;
+}
+.select:hover {
+  background-color: #F9F9F9;
 }
 .uploaded-imgs {
   display: -webkit-box;
@@ -801,11 +831,15 @@ body {
   overflow: hidden;
   border-radius: 5px;
 }
+.uploaded-imgs__img-container:hover .uploaded-imgs__del-img-btn {
+  display: block;
+}
 .uploaded-imgs__img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  pointer-events: none;
 }
 .uploaded-imgs__img:hover + .uploaded-imgs__del-img-btn {
   display: block;
@@ -847,6 +881,21 @@ body {
   color: #fff;
 }
 
+@media (max-width: 576px) {
+  .uploaded-imgs {
+    gap: 12px;
+  }
+  .uploaded-imgs__img-container {
+    max-width: 159px;
+    max-height: 159px;
+  }
+  .uploaded-imgs__del-img-btn {
+    display: block;
+    width: 35px;
+    height: 35px;
+    background-size: 15px;
+  }
+}
 .checkbox__input {
   display: none;
 }

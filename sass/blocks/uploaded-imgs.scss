@@ -13,12 +13,19 @@
     position: relative;
     overflow: hidden;
     border-radius: 5px;
+
+    &:hover {
+      & .uploaded-imgs__del-img-btn {
+        display: block;
+      }
+    }
   }
 
   &__img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    pointer-events: none;
     
 
     &:hover {
@@ -60,5 +67,23 @@
 
   &__main-photo-label-text {
     color: #fff;
+  }
+}
+
+@media (max-width: 576px) {
+  .uploaded-imgs {
+    gap: 12px;
+
+    &__img-container {
+      max-width: 159px;
+      max-height: 159px;
+    }
+
+    &__del-img-btn {
+      display: block;
+      width: 35px;
+      height: 35px;
+      background-size: 15px;
+    }
   }
 }

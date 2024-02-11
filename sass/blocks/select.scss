@@ -6,11 +6,17 @@
   border-radius: 5px;
   box-sizing: border-box;
 
+  background-color: #fff;
+
   background-image: url("/source/svg/arrow-down.svg");
   background-repeat: no-repeat;
   background-position: right 20px center;
 
   width: 100%;
+
+  &:hover {
+    background-color: $background-color;
+  }
 
   &__option {
     

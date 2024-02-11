@@ -41,3 +41,41 @@
   }
   
 }
+
+@media (max-width: 576px) {
+  .new-product-page {
+    padding: 0;
+    background-color: transparent;
+
+    &__input-field {
+      &--price-inputs {
+        & > input {
+          width: 100px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 360px) {
+  .new-product-page {
+
+    &__input-field {
+      &--price-inputs {
+        & > input {
+          width: 70px;
+        }
+      } 
+    }
+
+    &__fields-container {
+      &--rent-prices {
+        gap: 7px !important;
+      }
+    }
+
+    &--del-rent-btn {
+      margin-left: 10px;
+    }
+  }
+}

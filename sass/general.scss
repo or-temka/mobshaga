@@ -32,6 +32,12 @@ body {
   margin: 0 auto;
 }
 
+.selected {
+  // outline: 3px solid $main-color;
+  border: 3px solid $main-color;
+  box-sizing: border-box;
+}
+
 @media (max-width: 1150px) {
   .wrapper {
     width: 93%;
