@@ -11,6 +11,8 @@ window.delField = (fieldId) => {
 //Работа с загрузчиком фото
 
   //Кнопки удаления фото
+
+
 document.querySelectorAll(".uploaded-imgs__del-img-btn").forEach((elem) => {
   elem.addEventListener("click", (event) => {
     event.target.parentElement.remove();
@@ -44,9 +46,11 @@ function duringDragAndDrop(){
 }
 
 const imageUploader = new ImageUploader(
-  ".input--label-for-file",
+  ".input--file",
   ".uploaded-imgs",
+  ".input--label-for-file",
   {
+    delImgBtnSelector: ".uploaded-imgs__del-img-btn",
     draggableImg: true,
     photosUpdate: photoBoxUpdate,
     afterDragAndDrop: afterDragAndDrop,

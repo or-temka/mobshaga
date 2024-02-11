@@ -827,6 +827,8 @@ body {
 .uploaded-imgs__img-container {
   max-width: 185px;
   max-height: 185px;
+  width: 185px;
+  height: 185px;
   position: relative;
   overflow: hidden;
   border-radius: 5px;

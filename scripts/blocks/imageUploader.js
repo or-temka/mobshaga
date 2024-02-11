@@ -1,4 +1,10 @@
 export class ImageUploader {
+
+  photos = {};
+
+  maxPhotoAmount = 10;
+  currentPhotoAmount = 0;
+
   //uploadBtnSelector - Кнопка input (type file), с помощью которой происходит загрузка файлов
   //blockForPreviewSelector - отображает превью загруженных картинок
   //options - параметры для управления загрузчиком
@@ -6,8 +12,10 @@ export class ImageUploader {
     //photosUpdate - функция, обновляющая контейнер с видом фото после выполнения действия над ними
     //afterDragAndDrop - Функция, которая выполняется после перетаскивания
     //duringDragAndDrop - Функция, которая выполняется во время перетаскивания
-    constructor(uploadBtnSelector, blockForPreviewSelector, options = {}){
+    //delImgBtnSelector - Кнопки для удаления фото
+    constructor(uploadBtnSelector, blockForPreviewSelector, uploadBtnLabelSelector, options = {}){
     this.uploadBtn = document.querySelector(uploadBtnSelector);
+    this.uploadBtnLabel = document.querySelector(uploadBtnLabelSelector);
     this.blockForPreview = document.querySelector(blockForPreviewSelector);
 
     //Назначение пользовательских функций
@@ -19,6 +27,72 @@ export class ImageUploader {
       this._setDraggableImgs();
       this._setDraggableImgsForMobile();
     }
+
+    this.options = options;
+
+    //Настройки
+    this.uploadBtn.setAttribute("accept", ".jpg,.jpeg,.png");
+    this.uploadBtn.addEventListener("change", this._filesUpload.bind(this));
+
+  }
+
+  _setDelImgListener(imgBox){
+    if (!this.options.delImgBtnSelector){
+      return;
+    }
+    imgBox.querySelector(this.options.delImgBtnSelector).addEventListener("click", (event) => {
+        event.target.parentElement.remove();
+        this.currentPhotoAmount--;
+    })
+  }
+
+  _filesUpload(event){
+    if (!event.target.files.length){ return }
+
+    const files = Array.from(event.target.files);
+
+    files.forEach(file => {
+      if (file.type.match('image') === null){ return }
+
+      const fileReader = new FileReader();
+
+      fileReader.onload = (event) => {
+        if (this.currentPhotoAmount >= this.maxPhotoAmount) { 
+          return;
+        }
+        if (event.loaded > 2097152){
+          console.log("больше 2 мбайт");
+          return;
+        }
+        this.uploadImg(event.target.result);
+      }
+      fileReader.readAsDataURL(file);
+    })
+
+    
+  }
+
+  uploadImg(imgSrc){
+    const imgBox = document.createElement("div");
+    imgBox.classList.add("data-edit__uploaded-img-container");
+    imgBox.classList.add("uploaded-imgs__img-container");
+    imgBox.innerHTML = `
+      <img class="data-edit__uploaded-img uploaded-imgs__img" src="${imgSrc}" alt="Загруженное изображение">
+      <div class="data-edit__uploaded-img-del-btn uploaded-imgs__del-img-btn"></div>`
+
+    this.blockForPreview.append(imgBox);
+
+    if (this.options.draggableImg){
+      this._setDraggableImgs();
+      this._setDraggableImgsForMobile();
+    }
+
+    if (this.afterDragAndDrop) { this.afterDragAndDrop() };
+    if (this.photosUpdate) { this.photosUpdate() };
+
+    this._setDelImgListener(imgBox);
+
+    this.currentPhotoAmount++;
   }
 
   _setDraggableImgs(){ //Устанавливает перетаскивание фото
@@ -116,6 +190,7 @@ export class ImageUploader {
         elemForDrag.remove();
 
         //Элемент, на который упал тач
+        console.log(nowClientX, nowClientY);
         const endTouchElement = document.elementFromPoint(nowClientX, nowClientY);
 
         for (let imgBox of this.blockForPreview.children){
