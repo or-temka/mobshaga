@@ -34,6 +34,8 @@ function afterDragAndDrop(){
   const imgsBox = document.querySelector('.uploaded-imgs');
   for (let imgBox of imgsBox.children){
     imgBox.querySelector(".uploaded-imgs__main-photo-label")?.remove();
+    imgBox.style.opacity = "1";
+    
   }
 }
 
