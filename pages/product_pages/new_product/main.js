@@ -1,3 +1,6 @@
+import { start } from '/scripts/general.js'
+start();
+
 import { RentPriceSet } from "../../../scripts/blocks/RentPriceSet.js";
 import { ImageUploader } from "../../../scripts/blocks/imageUploader.js";
 

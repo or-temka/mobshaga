@@ -1,9 +1,11 @@
 export class ImageUploader {
 
   photos = {};
+  lastPhotoId = 0;
 
   maxPhotoAmount = 10;
   currentPhotoAmount = 0;
+  maxPhotoValue = 4494304; //4 МБ
 
   //uploadBtnSelector - Кнопка input (type file), с помощью которой происходит загрузка файлов
   //blockForPreviewSelector - отображает превью загруженных картинок
@@ -13,6 +15,7 @@ export class ImageUploader {
     //afterDragAndDrop - Функция, которая выполняется после перетаскивания
     //duringDragAndDrop - Функция, которая выполняется во время перетаскивания
     //delImgBtnSelector - Кнопки для удаления фото
+    //maxPhotoValue - Максимальный вес одного фото (в Байтах)
     constructor(uploadBtnSelector, blockForPreviewSelector, uploadBtnLabelSelector, options = {}){
     this.uploadBtn = document.querySelector(uploadBtnSelector);
     this.uploadBtnLabel = document.querySelector(uploadBtnLabelSelector);
@@ -22,6 +25,7 @@ export class ImageUploader {
     if (options.photosUpdate) { this.photosUpdate = options.photosUpdate; }
     if (options.afterDragAndDrop) { this.afterDragAndDrop = options.afterDragAndDrop; }
     if (options.duringDragAndDrop) { this.duringDragAndDrop = options.duringDragAndDrop; }
+    if (options.maxPhotoValue) { this.maxPhotoValue = options.maxPhotoValue; }
 
     if (options.draggableImg){
       this._setDraggableImgs();
@@ -33,7 +37,6 @@ export class ImageUploader {
     //Настройки
     this.uploadBtn.setAttribute("accept", ".jpg,.jpeg,.png");
     this.uploadBtn.addEventListener("change", this._filesUpload.bind(this));
-
   }
 
   _setDelImgListener(imgBox){
@@ -41,8 +44,14 @@ export class ImageUploader {
       return;
     }
     imgBox.querySelector(this.options.delImgBtnSelector).addEventListener("click", (event) => {
+        const delBtnIdData = event.target.getAttribute("data-img-id-in-files");
+        delete this.photos[delBtnIdData];
+        
         event.target.parentElement.remove();
         this.currentPhotoAmount--;
+
+        if (this.afterDragAndDrop) { this.afterDragAndDrop() };
+        if (this.photosUpdate) { this.photosUpdate() };
     })
   }
 
@@ -60,8 +69,7 @@ export class ImageUploader {
         if (this.currentPhotoAmount >= this.maxPhotoAmount) { 
           return;
         }
-        if (event.loaded > 2097152){
-          console.log("больше 2 мбайт");
+        if (event.loaded > this.maxPhotoValue){
           return;
         }
         this.uploadImg(event.target.result);
@@ -76,9 +84,12 @@ export class ImageUploader {
     const imgBox = document.createElement("div");
     imgBox.classList.add("data-edit__uploaded-img-container");
     imgBox.classList.add("uploaded-imgs__img-container");
+    this.photos[this.lastPhotoId] = imgSrc;
     imgBox.innerHTML = `
       <img class="data-edit__uploaded-img uploaded-imgs__img" src="${imgSrc}" alt="Загруженное изображение">
-      <div class="data-edit__uploaded-img-del-btn uploaded-imgs__del-img-btn"></div>`
+      <div data-img-id-in-files="${this.lastPhotoId}" class="data-edit__uploaded-img-del-btn uploaded-imgs__del-img-btn"></div>`
+
+    this.lastPhotoId++;
 
     this.blockForPreview.append(imgBox);
 
@@ -189,9 +200,11 @@ export class ImageUploader {
 
         elemForDrag.remove();
 
+        let endTouchElement;
         //Элемент, на который упал тач
-        console.log(nowClientX, nowClientY);
-        const endTouchElement = document.elementFromPoint(nowClientX, nowClientY);
+        if (nowClientX && nowClientY){
+          endTouchElement = document.elementFromPoint(nowClientX, nowClientY);
+        }
 
         for (let imgBox of this.blockForPreview.children){
           if (imgBox === endTouchElement){
@@ -201,7 +214,7 @@ export class ImageUploader {
 
         imgBlock.style.opacity = "1";
 
-        setTimeout(() => {imgBlock.style.opacity = "1";}, 250)
+        setTimeout(() => {imgBlock.style.opacity = "1";}, 400)
 
         if (this.afterDragAndDrop) { this.afterDragAndDrop() };
         if (this.photosUpdate) { this.photosUpdate() };

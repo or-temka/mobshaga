@@ -1,0 +1,104 @@
+@import '../../../sass/imports';
+
+// Импорты именно для данной страницы
+
+
+//Выделения для данной страницы
+.sign-in {
+
+  max-width: 572px;
+  margin: 49px auto;
+
+  &__main {
+    background-color: #fff;
+    border-radius: 5px;
+  }
+
+  &__container {
+    padding: 33px;
+  }
+
+
+  &__input {
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+
+  &__buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  &__btn {
+    display: block;
+    width: 46%;
+    box-sizing: border-box;
+    text-align: center;
+  }
+
+  &__forgot-password-container {
+    margin-top: 20px;
+    text-align: center;
+
+    &--first {
+      display: none;
+    }
+  }
+  
+  &__forgot-password-link {
+    color: $text-color;
+    text-decoration: underline;
+    text-decoration-line: 10px;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+}
+
+@media (max-width: 576px) {
+  .sign-in {
+
+    margin-top: 25px;
+
+    &__main {
+      background-color: transparent;
+    }
+
+    &__container {
+      padding: 0;
+    }
+
+  }
+}
+
+@media (max-width: 490px) {
+  .sign-in {
+
+    &__buttons {
+      flex-direction: column;
+      row-gap: 20px;
+    }
+
+    &__btn {
+      width: 100%;
+    }
+
+    &__forgot-password-container {
+      margin-top: 0;
+  
+      &--first {
+        display: inline;
+      }
+
+      &--second {
+        display: none;
+      }
+    }
+
+  }
+}

@@ -1,0 +1,90 @@
+<div class="data-edit">
+  <!-- hint field -->
+  <div class="data-edit__field-container">
+    <span class="data-edit__hint">
+      Hint text
+    </span>
+  </div>
+  <!-- With simple input field -->
+  <div class="data-edit__field-container">
+    <div class="data-edit__input-field">
+      <div class="data-edit__field-label-container">
+        <span class="data-edit__input-label data-edit__input-label--necessarily">
+          Field text
+        </span>
+      </div>
+      <input class="data-edit__input-text" type="text" placeholder="Название">
+    </div>
+  </div>
+  <!-- With checkbox field and select in one -->
+  <div class="data-edit__field-container">
+    <!-- two field in one row -->
+    <div class="data-edit__input-field">
+      <div class="data-edit__field-label-container">
+        <span class="data-edit__input-label data-edit__input-label--necessarily">
+          Field text
+        </span>
+        <div class="data-edit__checkbox-container">
+          <input class="data-edit__checkbox" id="checkbox-for-free" type="checkbox">
+          <label class="data-edit__checkbox-label" for="checkbox-for-free">
+            Checkbox text
+          </label>
+        </div>
+      </div>
+      <input class="data-edit__input-text" type="text" placeholder="В рублях">
+    </div>
+    <div class="data-edit__input-field">
+      <div class="data-edit__field-label-container">
+        <span class="data-edit__input-label">
+          Number
+        </span>
+      </div>
+      <select class="data-edit__select">
+        <option class="data-edit__option" value="1" selected>1</option>
+        <option class="data-edit__option" value="2">2</option>
+        <option class="data-edit__option" value="3">3</option>
+        <option class="data-edit__option" value="4">4</option>
+        <option class="data-edit__option" value="5">5</option>
+        <option class="data-edit__option" value="6">6</option>
+        <option class="data-edit__option" value="7">7</option>
+      </select>
+    </div>
+  </div>
+  <!-- file upload field -->
+  <div class="data-edit__field-container">
+    <!-- upload photo btn -->
+    <div class="data-edit__input-field">
+      <div class="data-edit__field-label-container">
+        <span class="data-edit__input-label data-edit__input-label--necessarily">
+          upload file text label
+        </span>
+      </div>
+      <input id="input-file-photo" class="data-edit__input-text data-edit__upload-img-input" type="file" placeholder="add file">
+      <label for="input-file-photo">Add file text label</label>
+      <!-- field hint -->
+      <span class="data-edit__hint">field hint</span>
+    </div>
+  </div>
+  <!-- uploaded imgs field -->
+  <div class="data-edit__field-container">
+    <div class="data-edit__input-field">
+      <div class="data-edit__uploaded-imgs">
+        <!-- view photos here -->
+      </div>
+    </div>
+  </div>
+  <!-- textarea input field -->
+  <div class="data-edit__field-container">
+    <div class="data-edit__input-field data-edit__input-field--full-field">
+      <div class="data-edit__field-label-container">
+        <span class="data-edit__input-label">
+          textarea text
+        </span>
+      </div>
+      <textarea class="data-edit__textarea" placeholder="text"></textarea>
+    </div>
+  </div>
+  <!-- right-align field -->
+  <div class="data-edit__field-container data-edit__field-container--right-align">
+  </div>
+</div>

@@ -30,4 +30,15 @@
       color: #fff;
     }
   }
+
+  &--transparent {
+    background-color: transparent;
+    color: $main-color;
+    border: 1px solid $main-color ;
+
+    &:hover {
+      color: #fff;
+      background-color: $main-color;
+    }
+  }
 }

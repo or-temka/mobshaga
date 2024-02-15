@@ -10,7 +10,7 @@
   <link rel="manifest" href="/source/icons/site.webmanifest">
   <link rel="stylesheet" href="/node_modules/normalize.css/normalize.css" type = "text/css">
   <link rel="stylesheet" href="/source/fonts/rubik/stylesheet.css" type = "text/css">
-  <link rel="stylesheet" href="new-product.css">
+  <link rel="stylesheet" href="sign-in.css">
 </head>
 <body>
   <!-- header ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
@@ -135,177 +135,54 @@
   <!-- main ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
   <main class="main">
     <div class="wrapper">
-      <section class="main__section">
+      <section class="main__section sign-in">
         <!-- main__header -->
         <div class="main__header">
           <div class="main__head-line main__head-first-line">
-            <h2 class="h2 main__label">Создание объявления</h2>
+            <h2 class="h2 main__label">Вход в аккаунт</h2>
           </div>
         </div>
         <!-- main content -->
         <div class="main__content">
-          <div class="new-product-page">
-            <div class="new-product-page__container data-edit">
-              <div class="new-product-page__field-container data-edit__field-container">
-                <span class="new-product-page__hint data-edit__hint">
-                  Заполните все обязательные поля, отмеченные звёздочкой *
-                </span>
-              </div>
-              <div class="new-product-page__fields-container data-edit__field-container">
-                <div class="new-product-page__input-field new-product-page__input-field--product-name data-edit__input-field">
-                  <div class="data-edit__field-label-container">
-                    <span class="new-product-page__input-label data-edit__input-label data-edit__input-label--necessarily">
-                      Название объявления (Товара)
-                    </span>
-                  </div>
-                  <input class="new-product-page__input new-product-page__input--product-name data-edit__input-text input" type="text" placeholder="Название">
-                </div>
-              </div>
-              <div class="new-product-page__fields-container data-edit__field-container">
-                <div class="new-product-page__input-field data-edit__input-field">
-                  <div class="data-edit__field-label-container">
-                    <span class="new-product-page__input-label data-edit__input-label data-edit__input-label--necessarily">
-                      Цена, р.
-                    </span>
-                    <div class="data-edit__checkbox-container checkbox">
-                      <input class="data-edit__checkbox checkbox__input" id="checkbox-for-free" type="checkbox">
-                      <label class="data-edit__checkbox-label checkbox__label" for="checkbox-for-free">
-                        Бесплатно
-                      </label>
+          <!-- sign-in - page styles -->
+          <div class="sign-in__main"> 
+            <div class="sign-in__container">
+
+              <div class="data-edit">
+                <div class="data-edit__field-container">
+                  <div class="data-edit__input-field">
+                    <div class="data-edit__field-label-container">
+                      <span class="data-edit__input-label data-edit__input-label--necessarily">
+                        Логин
+                      </span>
                     </div>
+                    <input class="data-edit__input-text input sign-in__input" type="text" placeholder="Укажите ваш логин">
                   </div>
-                  <input class="data-edit__input-text input" type="text" placeholder="В рублях">
                 </div>
-                <div class="new-product-page__input-field data-edit__input-field">
-                  <div class="data-edit__field-label-container">
-                    <span class="new-product-page__input-label data-edit__input-label">
-                      Единица измерения
-                    </span>
+                <div class="data-edit__field-container">
+                  <div class="data-edit__input-field">
+                    <div class="data-edit__field-label-container">
+                      <span class="data-edit__input-label data-edit__input-label--necessarily">
+                        Пароль
+                      </span>
+                    </div>
+                    <input class="data-edit__input-text input input--password sign-in__input" type="password" placeholder="Укажите ваш пароль">
                   </div>
-                  <select class="data-edit__select select">
-                    <option class="data-edit__option select__option" value="1" selected>Шт.</option>
-                    <option class="data-edit__option select__option" value="2">Кг.</option>
-                    <option class="data-edit__option select__option" value="3">Гр.</option>
-                    <option class="data-edit__option select__option" value="4">М.</option>
-                    <option class="data-edit__option select__option" value="5">См.</option>
-                    <option class="data-edit__option select__option" value="6">Мм.</option>
-                    <option class="data-edit__option select__option" value="7">Т.</option>
-                  </select>
+                </div>
+
+                <div class="data-edit__field-container sign-in__buttons">
+                  <button class="primary-btn sign-in__btn">Войти</button>
+                  <div class="data-edit__field-container sign-in__forgot-password-container sign-in__forgot-password-container--first">
+                    <a href="#" class="sign-in__forgot-password-link">Я забыл логин или пароль</a>
+                  </div>
+                  <a href="#" class="primary-btn primary-btn--transparent sign-in__btn">Зарегистрироваться</a>
+                </div>
+
+                <div class="data-edit__field-container sign-in__forgot-password-container sign-in__forgot-password-container--second">
+                  <a href="#" class="sign-in__forgot-password-link">Я забыл логин или пароль</a>
                 </div>
               </div>
-              <div class="new-product-page__fields-container data-edit__field-container">
-                <!-- upload photo btn -->
-                <div class="new-product-page__input-field data-edit__input-field">
-                  <div class="data-edit__field-label-container">
-                    <span class="new-product-page__input-label data-edit__input-label data-edit__input-label--necessarily">
-                      Фотография товара
-                    </span>
-                  </div>
-                  <input id="input-file-photo" class="data-edit__input-text data-edit__upload-img-input input input--file" type="file" placeholder="Добавить" multiple="multiple">
-                  <label for="input-file-photo" class="input--label-for-file">Добавить</label>
-                  <span class="new-product-page__hint data-edit__hint">Не более 10 фото [jpeg, jpg, png]. Размер файлов не более 4 МБ.</span>
-                </div>
-              </div>
-              <div class="new-product-page__fields-container data-edit__field-container">
-                <!-- uploaded photos -->
-                <div class="new-product-page__input-field data-edit__input-field">
-                  <div class="data-edit__uploaded-imgs uploaded-imgs">
-                    <!-- view photos here -->
-                  </div>
-                </div>
-              </div>
-              <div class="new-product-page__fields-container data-edit__field-container">
-                <div class="new-product-page__input-field data-edit__input-field">
-                  <div class="data-edit__field-label-container">
-                    <span class="new-product-page__input-label data-edit__input-label data-edit__input-label--necessarily">
-                      Состояние товара
-                    </span>
-                  </div>
-                  <select class="data-edit__select select">
-                    <option class="data-edit__option select__option" value="new" selected>Новый</option>
-                    <option class="data-edit__option select__option" value="old">Б/у</option>
-                  </select>
-                </div>
-                <div class="new-product-page__input-field data-edit__input-field new-product-page__input-field--in-stock">
-                  <div class="data-edit__field-label-container">
-                    <span class="new-product-page__input-label data-edit__input-label">
-                      В наличии (шт.)
-                    </span>
-                  </div>
-                  <input class="data-edit__input-text input" type="text" value="1">
-                </div>
-                <div class="new-product-page__input-field data-edit__input-field new-product-page__input-field--type-of-product">
-                  <div class="data-edit__field-label-container">
-                    <span class="new-product-page__input-label data-edit__input-label data-edit__input-label--necessarily">
-                      Тип товара
-                    </span>
-                  </div>
-                  <select class="data-edit__select select">
-                    <option class="data-edit__option select__option select__option--disabled" value="1" disabled selected>Выберите тип товара</option>
-                    <option class="data-edit__option select__option" value="2">Электроника</option>
-                    <option class="data-edit__option select__option" value="3">Бытовая техника</option>
-                    <option class="data-edit__option select__option" value="4">Мебель</option>
-                    <option class="data-edit__option select__option" value="5">Продукты питания</option>
-                    <option class="data-edit__option select__option" value="5">Косметика</option>
-                    <option class="data-edit__option select__option" value="6">Другое</option>
-                  </select>
-                </div>
-              </div>
-              <div class="new-product-page__field-container data-edit__field-container data-edit__main-label-container">
-                <span class="new-product-page__main-label-field data-edit__main-label-field">
-                  Расценки аренды:
-                </span>
-              </div>
-              <!-- add time-price for rent -->
-              <div class="new-product-page__fields-container new-product-page__fields-container--rent-prices data-edit__field-container">
-                <div id="price-rent-inputs" class="new-product-page__input-field new-product-page__input-field--price-inputs data-edit__input-field">
-                  <div class="data-edit__field-label-container">
-                    <span class="new-product-page__input-label data-edit__input-label data-edit__input-label--necessarily">
-                      Цена, р.
-                    </span>
-                  </div>
-                  <input id="price-rent-price-1" class="data-edit__input-text input" type="text" placeholder="Цена в рублях">
-                </div>
-                <div id="price-rent-selects" class="new-product-page__input-field data-edit__input-field">
-                  <div class="data-edit__field-label-container">
-                    <span class="new-product-page__input-label data-edit__input-label data-edit__input-label--necessarily">
-                      За какое время
-                    </span>
-                  </div>
-                  <select id="price-rent-time-1" class="data-edit__select select">
-                    <option data-time-rent="1hour" class="data-edit__option select__option" value="1hour" selected>1 час</option>
-                    <option data-time-rent="2hours" class="data-edit__option select__option" value="2hours">2 часа</option>
-                    <option data-time-rent="12hours" class="data-edit__option select__option" value="12hours">12 часов</option>
-                    <option data-time-rent="1day" class="data-edit__option select__option" value="1day">1 день</option>
-                    <option data-time-rent="2days" class="data-edit__option select__option" value="2days">2 дня</option>
-                    <option data-time-rent="3days" class="data-edit__option select__option" value="3days">3 дня</option>
-                    <option data-time-rent="4days" class="data-edit__option select__option" value="4days">4 дня</option>
-                    <option data-time-rent="5days" class="data-edit__option select__option" value="5days">5 дней</option>
-                    <option data-time-rent="1week" class="data-edit__option select__option" value="1week">1 неделя</option>
-                    <option data-time-rent="2weeks" class="data-edit__option select__option" value="2weeks">2 недели</option>
-                    <option data-time-rent="1month" class="data-edit__option select__option" value="1month">1 месяц</option>
-                  </select>
-                </div>
-                <div id="price-rent-del-btns" class="new-product-page__input-field data-edit__input-field data-edit__del-btns">
-                  <div class="data-edit__del-btn-container"></div>
-                </div>
-              </div>
-              <div class="new-product-page__fields-container data-edit__field-container">
-                <button id="more-price-rent-fields-btn" class="primary-btn primary-btn--grey">+ Расценка</button>
-              </div>
-              <div class="new-product-page__fields-container data-edit__field-container">
-                <div class="new-product-page__input-field data-edit__input-field data-edit__input-field--full-field">
-                  <div class="data-edit__field-label-container">
-                    <span class="new-product-page__input-label data-edit__input-label">
-                      Описание
-                    </span>
-                  </div>
-                  <textarea class="data-edit__textarea textarea" placeholder="К примеру: Роликам 12 лет, в отличном состояние"></textarea>
-                </div>
-              </div>
-              <div class="new-product-page__fields-container data-edit__field-container data-edit__field-container--right-align">
-                <button class="primary-btn new-product-page__ad-done-btn">Разместить объявление</button>
-              </div>
+
             </div>
           </div>
         </div>

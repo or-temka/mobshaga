@@ -1,9 +1,0 @@
-.full-product-photo {
-  width: 100%;
-  position: fixed;
-  z-index: 100;
-}
-.full-product-photo__mini-photo {
-  width: 100px;
-  height: 75px;
-}
