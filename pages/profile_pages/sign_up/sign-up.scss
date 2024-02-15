@@ -1,0 +1,69 @@
+@import '../../../sass/imports';
+
+// Импорты именно для данной страницы
+@import '../../../sass/blocks/data-edit';
+@import '../../../sass/blocks/textarea';
+@import '../../../sass/blocks/select';
+
+//Выделения для данной страницы
+.sign-up {
+  
+
+  &__wrapper {
+    background-color: #fff;
+    border-radius: 5px;
+  }
+
+  &__container {
+    padding: 31px;
+  }
+
+  &__input-field {
+    width: 48%;
+
+    &--vk-link {
+      width: 100%;
+    }
+
+    &--number {
+      width: 240px;
+    }
+
+    &--hotel-room {
+      width: fit-content;
+    }
+
+    &--hotel-num {
+      width: fit-content;
+    }
+  }
+
+  &__textarea {
+
+  }
+}
+
+@media (max-width: 576px) {
+  .sign-up {
+
+    &__wrapper {
+      background-color: transparent;
+    }
+
+    &__container {
+      padding: 0;
+    }
+
+    &__input-field {
+      width: 100%;
+
+      &--hotel-num {
+        width: auto;
+      }
+
+      &--hotel-room {
+        width: 200px;
+      }
+    }
+  }
+}
