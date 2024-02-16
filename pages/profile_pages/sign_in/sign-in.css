@@ -74,6 +74,50 @@ body {
     background: transparent; /* Optional: just make scrollbar invisible */
   }
 }
+@-webkit-keyframes wrong-rocking {
+  0% {
+    -webkit-transform: translateX(-3px);
+            transform: translateX(-3px);
+    color: #fff;
+  }
+  25% {
+    -webkit-transform: translateX(3px);
+            transform: translateX(3px);
+    color: black;
+  }
+  50% {
+    -webkit-transform: translateX(-3px);
+            transform: translateX(-3px);
+    color: red;
+  }
+  100% {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+    color: aqua;
+  }
+}
+@keyframes wrong-rocking {
+  0% {
+    -webkit-transform: translateX(-3px);
+            transform: translateX(-3px);
+    color: #fff;
+  }
+  25% {
+    -webkit-transform: translateX(3px);
+            transform: translateX(3px);
+    color: black;
+  }
+  50% {
+    -webkit-transform: translateX(-3px);
+            transform: translateX(-3px);
+    color: red;
+  }
+  100% {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+    color: aqua;
+  }
+}
 .logo {
   font-size: 32px;
   display: inline-block;
@@ -133,6 +177,11 @@ body {
 }
 .input:hover {
   background-color: #F9F9F9;
+}
+.input--wrong {
+  border: 2px solid #ff3c3c;
+  -webkit-animation: wrong-rocking 0.5s ease-in-out;
+          animation: wrong-rocking 0.5s ease-in-out;
 }
 .input--search {
   background-image: url(/source/svg/search.svg);

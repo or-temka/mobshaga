@@ -6,6 +6,10 @@
 
   &__hint {
     color: $grey-color;
+
+    &--wrong {
+      color: $wrong-color;
+    }
   }
 
   &__main-label-container {

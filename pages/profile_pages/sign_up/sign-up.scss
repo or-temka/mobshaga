@@ -40,6 +40,13 @@
     }
   }
 
+  &__input {
+
+    &--hotel-room {
+      padding-right: 10px;
+    }
+  }
+
   &__checkboxs-rule {
     display: flex;
     flex-direction: column;
