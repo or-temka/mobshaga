@@ -4,6 +4,8 @@
 @import '../../../sass/blocks/data-edit';
 @import '../../../sass/blocks/textarea';
 @import '../../../sass/blocks/select';
+@import '../../../sass/blocks/profile-photo-upload';
+@import '../../../sass/blocks/checkbox';
 
 //Выделения для данной страницы
 .sign-up {
@@ -38,8 +40,15 @@
     }
   }
 
-  &__textarea {
+  &__checkboxs-rule {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+  }
 
+  &__create-profile-btn {
+    width: 100%;
+    max-width: 290px;
   }
 }
 
@@ -64,6 +73,11 @@
       &--hotel-room {
         width: 200px;
       }
+    }
+
+    &__create-profile-btn {
+      width: 100%;
+      max-width: none;
     }
   }
 }

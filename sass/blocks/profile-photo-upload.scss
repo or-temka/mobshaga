@@ -1,0 +1,30 @@
+.profile-photo-upload {
+
+  &__container {
+    display: flex;
+    flex-direction: row;
+    column-gap: 25px;
+  }
+
+  &__big-photo {
+
+  }
+
+  &__small-photo {
+
+  }
+
+  &__big-photo-img {
+    width: 185px;
+    height: 185px;
+    object-fit: cover;
+    border-radius: 5px;
+  }
+
+  &__small-photo-img {
+    width: 46px;
+    height: 46px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+}

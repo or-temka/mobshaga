@@ -52,6 +52,14 @@ body {
           box-sizing: border-box;
 }
 
+.link {
+  color: #0038FF;
+  text-decoration: underline;
+}
+.link:hover {
+  color: #7000FF;
+}
+
 @media (max-width: 1150px) {
   .wrapper {
     width: 93%;
@@ -738,6 +746,11 @@ body {
       -ms-flex-pack: end;
           justify-content: flex-end;
 }
+.data-edit__field-container--space-between {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
 .data-edit__input-field {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -798,6 +811,7 @@ body {
 .data-edit__del-field-btn:hover {
   background-color: #333333;
 }
+
 .select {
   -webkit-appearance: none;
      -moz-appearance: none;

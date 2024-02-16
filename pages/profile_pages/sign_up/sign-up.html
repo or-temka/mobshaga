@@ -218,7 +218,7 @@
                         Комната в общажитие
                       </span>
                     </div>
-                    <input class="data-edit__input-text input sign-up__input sign-up__input--hotel-room" type="text" placeholder="Например: 4301">
+                    <input class="data-edit__input-text input sign-up__input sign-up__input--hotel-room" type="number" placeholder="Например: 4301" min="1" max="9999" minlength="1" maxlength="4">
                   </div>
                 </div>
                 <!-- number -->
@@ -229,7 +229,7 @@
                         Номер телефона
                       </span>
                     </div>
-                    <input class="data-edit__input-text input sign-up__input sign-up__input--phone-number" type="text" placeholder="+7">
+                    <input class="data-edit__input-text input sign-up__input sign-up__input--phone-number" type="tel" placeholder="+7">
                   </div>
                   <div class="data-edit__input-field sign-up__input-field sign-up__input-field--vk-link">
                     <div class="data-edit__field-label-container">
@@ -237,7 +237,7 @@
                         Ссылка на профиль Вконтакте
                       </span>
                     </div>
-                    <input class="data-edit__input-text input sign-up__input sign-up__input--vk-link" type="text" placeholder="Формат: https://vk.com/123">
+                    <input class="data-edit__input-text input sign-up__input sign-up__input--vk-link" type="url" placeholder="Формат: https://vk.com/123">
                   </div>
                 </div>
                 <!-- file upload field -->
@@ -250,7 +250,7 @@
                       </span>
                     </div>
                     <input id="input-file-photo" class="data-edit__input-text data-edit__upload-img-input input input--file" type="file" placeholder="">
-                    <label for="input-file-photo" class="input--label-for-file" for="input-file-photo">Добавить</label>
+                    <label for="input-file-photo" class="input--label-for-file">Добавить</label>
                     <!-- field hint -->
                     <span class="data-edit__hint">Фото формата [jpeg, jpg, png]. Максимальный размер 4 Мб.</span>
                   </div>
@@ -259,7 +259,18 @@
                 <div class="data-edit__field-container">
                   <div class="data-edit__input-field">
                     <div class="data-edit__uploaded-imgs">
-                      <!-- view photos here -->
+                      
+                      <div class="profile-photo-upload">
+                        <div class="profile-photo-upload__container">
+                          <div class="profile-photo-upload__big-photo">
+                            <img src="" alt="" class="profile-photo-upload__big-photo-img">
+                          </div>
+                          <div class="profile-photo-upload__small-photo">
+                            <img src="" alt="" class="profile-photo-upload__small-photo-img">
+                          </div>
+                        </div>
+                      </div>
+
                     </div>
                   </div>
                 </div>
@@ -276,7 +287,17 @@
                 </div>
                 <!-- right-align field -->
                 <div class="data-edit__field-container data-edit__field-container--space-between">
-
+                  <div class="sign-up__checkboxs-rule">
+                    <div class="sign-up__checkbox-rule checkbox">
+                      <input id="cite-rule-checkbox" type="checkbox" class="checkbox__input" checked>
+                      <label for="cite-rule-checkbox" class="checkbox__label">Согласен с&nbsp;<a href="#" class="link">правилами сайта</a></label>
+                    </div>
+                    <div class="sign-up__checkbox-rule checkbox">
+                      <input id="user-agreement-checkbox" type="checkbox" class="checkbox__input" checked>
+                      <label for="user-agreement-checkbox" class="checkbox__label">Принимаю&nbsp;<a href="#" class="link">пользовательское соглашение</a></label>
+                    </div>
+                  </div>
+                  <button class="primary-btn sign-up__create-profile-btn">Создать аккаунт</button>
                 </div>
               </div>
 

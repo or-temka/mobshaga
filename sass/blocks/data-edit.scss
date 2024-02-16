@@ -21,9 +21,14 @@
     flex-direction: row;
     flex-wrap: wrap;
     gap: 20px;
+
     &--right-align {
       display: flex;
       justify-content: flex-end;
+    }
+
+    &--space-between {
+      justify-content: space-between;
     }
   }
 
@@ -44,10 +49,6 @@
     gap: 20px;
   }
 
-  &__input-text {
-
-  }
-
   &__input-label {
 
     &--necessarily {
@@ -56,22 +57,6 @@
         color: $main-color;
       }
     }
-  }
-
-  &__checkbox-container {
-
-  }
-
-  &__checkbox {
-
-  }
-
-  &__checkbox-label {
-
-  }
-
-  &__select {
-
   }
 
   &__del-btns {
@@ -99,37 +84,5 @@
     &:hover {
       background-color: $text-color;
     }
-  }
-
-  &__option {
-
-  }
-
-  &__uploaded-imgs {
-
-  }
-
-  &__uploaded-img-container {
-
-  }
-
-  &__uploaded-img {
-
-  }
-
-  &__uploaded-img-del-btn {
-
-  }
-
-  &__main-photo-label {
-
-  }
-
-  &__main-photo-label-text {
-    
-  }
-
-  &__textarea {
-    
   }
 }
