@@ -1,0 +1,16 @@
+@import '../../../sass/imports';
+
+// Импорты именно для данной страницы
+
+
+//Выделения для данной страницы
+
+.person-profile {
+  background-color: #fff;
+  padding: 32px;
+  border-radius: 5px;
+  
+  &__profile {
+
+  }  
+}
