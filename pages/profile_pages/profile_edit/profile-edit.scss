@@ -1,0 +1,171 @@
+@import '../../../sass/imports';
+
+// Импорты именно для данной страницы
+@import '../../../sass/blocks/data-edit';
+@import '../../../sass/blocks/textarea';
+@import '../../../sass/blocks/select';
+@import '../../../sass/blocks/profile-photo-upload';
+@import '../../../sass/blocks/checkbox';
+
+
+//Выделения для данной страницы
+
+
+.profile-edit {
+
+  &__container {
+    display: flex;
+    flex-direction: row;
+    gap: 21px;
+  }
+
+  &__left-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 100%;
+    max-width: 244px;
+  }
+
+  &__menu {
+    display: flex;
+    flex-direction: column;
+    min-width: 244px;
+  }
+
+  &__mobile-menu {
+    display: none;
+  }
+
+  &__menu-btn {
+    outline: none;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: transparent;
+    padding: 10px 22px;
+    text-align: left;
+
+    &:hover {
+      background-color: lighten($choice-color, 5%);
+    }
+
+    &--active {
+      background-color: $choice-color;
+
+      &:hover {
+        background-color: darken($choice-color, 5%);
+      }
+    }
+
+    
+  }
+
+  &__save-edit-btn {
+
+    &--mobile {
+      display: none;
+      width: 100%;
+      margin-top: 20px;
+    }
+  }
+
+  &__edit-content {
+    background-color: #fff;
+    padding: 23px;
+    border-radius: 5px;
+  }
+
+  &__edit-main-info {
+    display: block;
+  }
+
+  &__edit-log-pass {
+    display: none;
+  }
+
+  &__edit-privacy {
+    display: none;
+  }
+
+  &__main-info-fields-first {
+    display: flex;
+    flex-direction: row;
+    column-gap: 44px;
+    row-gap: 20px;
+  }
+
+
+  &__main-info-left-fields {
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+    gap: 18px;
+  }
+
+  &__main-info-right-fields {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  &__input-field {
+    width: 100%;
+  }
+
+  &__input-for-edit {
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
+
+@media (max-width: 930px) {
+  .profile-edit {
+    
+
+    &__main-info-fields-first {
+      flex-direction: column;
+    }
+
+    &__main-info-left-fields {
+      width: 100%;
+    }
+
+  }
+}
+
+@media (max-width: 576px) {
+  .profile-edit {
+    
+
+    &__container {
+      flex-direction: column;
+    }
+
+    &__left-menu {
+      max-width: 100%;
+      width: 100%;
+    }
+
+    &__menu {
+      display: none;
+    }
+
+    &__mobile-menu {
+      display: block;
+    }
+
+    &__edit-content {
+      background-color: transparent;
+      padding: 0;
+    }
+
+    &__save-edit-btn {
+
+      &--mobile {
+        display: block;
+      }
+    }
+
+  }
+}

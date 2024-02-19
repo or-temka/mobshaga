@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Создание профиля | Мобщага</title>
+  <title>Редактирование профиля | Мобщага</title>
   <link rel="apple-touch-icon" sizes="180x180" href="/source/icons/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/source/icons/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/source/icons/favicon-16x16.png">
   <link rel="manifest" href="/source/icons/site.webmanifest">
   <link rel="stylesheet" href="/node_modules/normalize.css/normalize.css" type = "text/css">
   <link rel="stylesheet" href="/source/fonts/rubik/stylesheet.css" type = "text/css">
-  <link rel="stylesheet" href="sign-up.css">
+  <link rel="stylesheet" href="profile-edit.css">
 </head>
 <body>
   <!-- header ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
@@ -40,7 +40,7 @@
               <li class="menu__item menu__item-child"><a href="#">Услуги</a></li>
             </ul>
           </li>
-          <li class="header__menu-item header__sign-up"><a href="#">Войти</a></li>
+          <li class="header__menu-item"><a href="#">Войти</a></li>
         </ul>
         <div id="mobileMenuBtn" class="open-menu-btn open-menu-btn--not-active header__mobile-btn">
           <div class="open-menu-btn__first-line open-menu-btn__line"></div>
@@ -135,172 +135,247 @@
   <!-- main ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
   <main class="main">
     <div class="wrapper">
-      <section class="main__section sign-up">
+      <section class="main__section profile-edit">
         <!-- main__header -->
         <div class="main__header">
           <div class="main__head-line main__head-first-line">
-            <h2 class="h2 main__label">Создание профиля</h2>
+            <h2 class="h2 main__label">Редактирование профиля</h2>
           </div>
         </div>
         <!-- main content -->
         <div class="main__content">
-          <div class="sign-up__wrapper">
-            <div class="sign-up__container">
+          <div class="profile-edit__container">
+            <!-- left menu -->
+            <div class="profile-edit__left-menu">
+              <div class="profile-edit__mobile-menu">
+                <select id="mobile-menu-edit-category" class="select">
+                  <option class="option" value="main-info" selected>Основная информация</option>
+                  <option class="option" value="login-pass">Логин и пароль</option>
+                  <option class="option" value="privacy">Приватность</option>
+                </select>
+              </div>
+              <div class="profile-edit__menu">
+                <button data-edit-page="main-info" class="profile-edit__menu-btn profile-edit__menu-btn--active">Основная информация</button>
+                <button data-edit-page="login-pass" class="profile-edit__menu-btn">Логин и пароль</button>
+                <button data-edit-page="privacy" class="profile-edit__menu-btn">Приватность</button>
+              </div>
+              <button class="profile-edit__save-edit-btn primary-btn">Сохранить</button>
+            </div>
+            <!-- edit-content -->
+            <div class="profile-edit__edit-content">
 
-              <div class="data-edit">
-                <!-- hint field -->
-                <div class="data-edit__field-container">
-                  <span class="data-edit__hint">
-                    Заполните все обязательные поля, отмеченные звёздочкой *
-                  </span>
-                </div>
-                <!-- login -->
-                <div class="data-edit__field-container">
-                  <div class="data-edit__input-field sign-up__input-field">
-                    <div class="data-edit__field-label-container">
-                      <span class="data-edit__input-label data-edit__input-label--necessarily">
-                        Логин
-                      </span>
-                    </div>
-                    <input maxlength="30" class="data-edit__input-text input sign-up__input sign-up__input--login" type="text" placeholder="Введите ваш логин">
+              <!-- main-info -->
+              <div data-edit-page="main-info" class="profile-edit__edit-page profile-edit__edit-main-info">
+                <div class="data-edit">
+                  <!-- hint field -->
+                  <div class="data-edit__field-container">
+                    <span class="data-edit__hint">
+                      В данном разделе содержатся основные данные о вашем профиле. Поставьте ваше настоящее имя и фото профиля, чтобы другие пользователи смогли вас узнать.
+                    </span>
                   </div>
-                </div>
-                <!-- password -->
-                <div class="data-edit__field-container">
-                  <div class="data-edit__input-field sign-up__input-field sign-up__input-field--password">
-                    <div class="data-edit__field-label-container">
-                      <span class="data-edit__input-label data-edit__input-label--necessarily">
-                        Пароль
-                      </span>
-                    </div>
-                    <input maxlength="40" class="data-edit__input-text input sign-up__input sign-up__input--password" type="password" placeholder="Введите ваш пароль">
-                  </div>
-                  <div class="data-edit__input-field sign-up__input-field sign-up__input-field--password">
-                    <div class="data-edit__field-label-container">
-                      <span class="data-edit__input-label data-edit__input-label--necessarily">
-                        Подтверждение пароля
-                      </span>
-                    </div>
-                    <input maxlength="40" class="data-edit__input-text input sign-up__input sign-up__input--password sign-up__input--password-again" type="password" placeholder="Введите пароль ещё раз">
-                  </div>
-                </div>
-                <!-- profile name -->
-                <div class="data-edit__field-container">
-                  <div class="data-edit__input-field sign-up__input-field">
-                    <div class="data-edit__field-label-container">
-                      <span class="data-edit__input-label data-edit__input-label--necessarily">
-                        Имя профиля
-                      </span>
-                    </div>
-                    <input maxlength="40" class="data-edit__input-text input sign-up__input sign-up__input--profile-name" type="text" placeholder="Возможно, ваше фио">
-                  </div>
-                </div>
-                <!-- Hotel number -->
-                <div class="data-edit__field-container">
-                  <div class="data-edit__input-field sign-up__input-field sign-up__input-field--hotel-num">
-                    <div class="data-edit__field-label-container">
-                      <span class="data-edit__input-label data-edit__input-label--necessarily">
-                        Общежитие №
-                      </span>
-                    </div>
-                    <select id="hotel-number-select" class="data-edit__select select">
-                      <option class="data-edit__option option" value="null" selected>Не с общежития</option>
-                      <option class="data-edit__option option" value="1">1</option>
-                      <option class="data-edit__option option" value="2">2</option>
-                      <option class="data-edit__option option" value="3">3</option>
-                      <option class="data-edit__option option" value="4">4</option>
-                      <option class="data-edit__option option" value="5">5</option>
-                    </select>
-                  </div>
-                  <div class="data-edit__input-field sign-up__input-field sign-up__input-field--hotel-room">
-                    <div class="data-edit__field-label-container">
-                      <span class="data-edit__input-label data-edit__input-label--necessarily">
-                        Комната в общежитие
-                      </span>
-                    </div>
-                    <input maxlength="4" class="data-edit__input-text input sign-up__input sign-up__input--hotel-room" type="text" placeholder="Например: 4301" min="1" max="9999" minlength="1" maxlength="4">
-                  </div>
-                </div>
-                <!-- number -->
-                <div class="data-edit__field-container">
-                  <div class="data-edit__input-field sign-up__input-field sign-up__input-field--number">
-                    <div class="data-edit__field-label-container">
-                      <span class="data-edit__input-label">
-                        Номер телефона
-                      </span>
-                    </div>
-                    <input class="data-edit__input-text input sign-up__input sign-up__input--phone-number" type="tel" placeholder="+7">
-                  </div>
-                  <div class="data-edit__input-field sign-up__input-field sign-up__input-field--vk-link">
-                    <div class="data-edit__field-label-container">
-                      <span class="data-edit__input-label">
-                        Ссылка на профиль Вконтакте
-                      </span>
-                    </div>
-                    <input maxlength="200" class="data-edit__input-text input sign-up__input sign-up__input--vk-link" type="url" placeholder="Формат: https://vk.com/123">
-                  </div>
-                </div>
-                <!-- file upload field -->
-                <div class="data-edit__field-container">
-                  <!-- upload photo btn -->
-                  <div class="data-edit__input-field sign-up__input-field">
-                    <div class="data-edit__field-label-container">
-                      <span class="data-edit__input-label">
-                        Фото профиля
-                      </span>
-                    </div>
-                    <input id="input-file-photo" class="data-edit__input-text data-edit__upload-img-input input input--file" type="file" placeholder="">
-                    <label for="input-file-photo" class="input--label-for-file">Добавить</label>
-                    <!-- field hint -->
-                    <span class="data-edit__hint">Фото формата [jpeg, jpg, png]. Максимальный размер 4 Мб.</span>
-                  </div>
-                </div>
-                <!-- uploaded imgs field -->
-                <div class="data-edit__field-container">
-                  <div class="data-edit__input-field">
-                    <div class="data-edit__uploaded-imgs">
-                      
-                      <div class="profile-photo-upload">
-                        <div class="profile-photo-upload__container">
-                          <div class="profile-photo-upload__big-photo">
-                            <img src="" alt="" class="profile-photo-upload__big-photo-img">
+                  <div class="profile-edit__main-info-fields-first">
+                    <div class="profile-edit__main-info-left-fields">
+                      <!-- profile name -->
+                      <div class="data-edit__field-container">
+                        <div class="data-edit__input-field profile-edit__input-field">
+                          <div class="data-edit__field-label-container">
+                            <span class="data-edit__input-label data-edit__input-label--necessarily">
+                              Имя профиля
+                            </span>
                           </div>
-                          <div class="profile-photo-upload__small-photo">
-                            <img src="" alt="" class="profile-photo-upload__small-photo-img">
+                          <input maxlength="40" class="data-edit__input-text input profile-edit__input-for-edit" type="text" placeholder="Возможно, ваше фио">
+                        </div>
+                      </div>
+                      <!-- Hotel number -->
+                      <div class="data-edit__field-container">
+                        <div class="data-edit__input-field profile-edit__input-field">
+                          <div class="data-edit__field-label-container">
+                            <span class="data-edit__input-label data-edit__input-label--necessarily">
+                              Общежитие №
+                            </span>
+                          </div>
+                          <select id="hotel-number-select" class="data-edit__select select">
+                            <option class="data-edit__option option" value="null" selected>Не с общежития</option>
+                            <option class="data-edit__option option" value="1">1</option>
+                            <option class="data-edit__option option" value="2">2</option>
+                            <option class="data-edit__option option" value="3">3</option>
+                            <option class="data-edit__option option" value="4">4</option>
+                            <option class="data-edit__option option" value="5">5</option>
+                          </select>
+                        </div>
+                      </div>
+                      <!-- Room number -->
+                      <div class="data-edit__field-container">
+                        <div class="data-edit__input-field profile-edit__input-field">
+                          <div class="data-edit__field-label-container">
+                            <span class="data-edit__input-label data-edit__input-label--necessarily">
+                              Комната в общежитие
+                            </span>
+                          </div>
+                          <input maxlength="4" class="data-edit__input-text input profile-edit__input-for-edit profile-edit__input--hotel-room" type="text" placeholder="Например: 4301" min="1" max="9999" minlength="1" maxlength="4">
+                        </div>
+                      </div>
+                      <!-- number -->
+                      <div class="data-edit__field-container">
+                        <div class="data-edit__input-field profile-edit__input-field">
+                          <div class="data-edit__field-label-container">
+                            <span class="data-edit__input-label">
+                              Номер телефона
+                            </span>
+                          </div>
+                          <input class="data-edit__input-text input profile-edit__input-for-edit" type="tel" placeholder="+7">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="profile-edit__main-info-right-fields">
+                      <!-- file upload field -->
+                      <div class="data-edit__field-container">
+                        <!-- upload photo btn -->
+                        <div class="data-edit__input-field">
+                          <div class="data-edit__field-label-container">
+                            <span class="data-edit__input-label">
+                              Фото профиля
+                            </span>
+                          </div>
+                          <input id="input-file-photo" class="data-edit__input-text data-edit__upload-img-input input input--file" type="file" placeholder="">
+                          <label for="input-file-photo" class="input--label-for-file">Добавить</label>
+                          <!-- field hint -->
+                          <span class="data-edit__hint">Фото формата [jpeg, jpg, png]. Максимальный размер 4 Мб.</span>
+                        </div>
+                      </div>
+                      <!-- uploaded imgs field -->
+                      <div class="data-edit__field-container">
+                        <div class="data-edit__input-field">
+                          <div class="data-edit__uploaded-imgs">
+                            
+                            <div class="profile-photo-upload">
+                              <div class="profile-photo-upload__container">
+                                <div class="profile-photo-upload__big-photo">
+                                  <img src="" alt="" class="profile-photo-upload__big-photo-img">
+                                </div>
+                                <div class="profile-photo-upload__small-photo">
+                                  <img src="" alt="" class="profile-photo-upload__small-photo-img">
+                                </div>
+                              </div>
+                            </div>
+
                           </div>
                         </div>
                       </div>
-
                     </div>
                   </div>
-                </div>
-                <!-- textarea input field -->
-                <div class="data-edit__field-container">
-                  <div class="data-edit__input-field data-edit__input-field--full-field">
-                    <div class="data-edit__field-label-container">
-                      <span class="data-edit__input-label">
-                        О себе
-                      </span>
-                    </div>
-                    <textarea maxlength="430" class="data-edit__textarea textarea sign-up__textarea" placeholder="Например: мне 5"></textarea>
-                  </div>
-                </div>
-                <!-- right-align field -->
-                <div class="data-edit__field-container data-edit__field-container--space-between">
-                  <div class="sign-up__checkboxs-rule">
-                    <div class="sign-up__checkbox-rule checkbox">
-                      <input id="cite-rule-checkbox" type="checkbox" class="checkbox__input" checked>
-                      <label for="cite-rule-checkbox" class="checkbox__label">Согласен с&nbsp;<a href="#" class="link">правилами сайта</a></label>
-                    </div>
-                    <div class="sign-up__checkbox-rule checkbox">
-                      <input id="user-agreement-checkbox" type="checkbox" class="checkbox__input" checked>
-                      <label for="user-agreement-checkbox" class="checkbox__label">Принимаю&nbsp;<a href="#" class="link">пользовательское соглашение</a></label>
+                  
+                  <!-- Vk profile -->
+                  <div class="data-edit__field-container">
+                    <div class="data-edit__input-field profile-edit__input-field">
+                      <div class="data-edit__field-label-container">
+                        <span class="data-edit__input-label">
+                          Ссылка на профиль Вконтакте
+                        </span>
+                      </div>
+                      <input maxlength="200" class="data-edit__input-text input profile-edit__input-for-edit" type="url" placeholder="Формат: https://vk.com/123">
                     </div>
                   </div>
-                  <button class="primary-btn sign-up__create-profile-btn">Создать аккаунт</button>
+                  <!-- textarea input field -->
+                  <div class="data-edit__field-container">
+                    <div class="data-edit__input-field data-edit__input-field--full-field profile-edit__input-field">
+                      <div class="data-edit__field-label-container">
+                        <span class="data-edit__input-label">
+                          О себе
+                        </span>
+                      </div>
+                      <textarea maxlength="430" class="data-edit__textarea textarea" placeholder="Например: мне 5"></textarea>
+                    </div>
+                  </div>
                 </div>
               </div>
 
+              <!-- login and password -->
+              <div data-edit-page="login-pass" class="profile-edit__edit-page profile-edit__edit-log-pass">
+                <div class="data-edit">
+                  <!-- hint field -->
+                  <div class="data-edit__field-container">
+                    <span class="data-edit__hint">
+                      В данном разделе вы можете сменить свой логин или пароль.
+                    </span>
+                  </div>
+                  <!-- login -->
+                  <div class="data-edit__field-container">
+                    <div class="data-edit__input-field profile-edit__input-field">
+                      <div class="data-edit__field-label-container">
+                        <span class="data-edit__input-label data-edit__input-label--necessarily">
+                          Логин
+                        </span>
+                      </div>
+                      <input maxlength="30" class="data-edit__input-text input profile-edit__input-for-edit" type="text" placeholder="Введите ваш логин">
+                    </div>
+                  </div>
+                  <!-- hint field -->
+                  <div class="data-edit__field-container">
+                    <span class="data-edit__hint">
+                      Смена пароля
+                    </span>
+                  </div>
+                  <!-- password -->
+                  <div class="data-edit__field-container profile">
+                    <div class="data-edit__input-field profile-edit__input-field">
+                      <div class="data-edit__field-label-container">
+                        <span class="data-edit__input-label data-edit__input-label--necessarily">
+                          Старый пароль
+                        </span>
+                      </div>
+                      <input maxlength="40" class="data-edit__input-text input profile-edit__input-for-edit" type="password" placeholder="Введите ваш пароль">
+                    </div>
+                    <div class="data-edit__input-field profile-edit__input-field">
+                      <div class="data-edit__field-label-container">
+                        <span class="data-edit__input-label data-edit__input-label--necessarily">
+                          Новый пароль
+                        </span>
+                      </div>
+                      <input maxlength="40" class="data-edit__input-text input profile-edit__input-for-edit" type="password" placeholder="Введите ваш пароль">
+                    </div>
+                    <div class="data-edit__input-field profile-edit__input-field">
+                      <div class="data-edit__field-label-container">
+                        <span class="data-edit__input-label data-edit__input-label--necessarily">
+                          Подтверждение пароля
+                        </span>
+                      </div>
+                      <input maxlength="40" class="data-edit__input-text input profile-edit__input-for-edit" type="password" placeholder="Введите пароль ещё раз">
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- privacy -->
+              <div data-edit-page="privacy" class="profile-edit__edit-page profile-edit__edit-privacy">
+                <div class="data-edit">
+                  <!-- hint field -->
+                  <div class="data-edit__field-container">
+                    <span class="data-edit__hint">
+                      В данном разделе вы можете настроить приватность вашего аккаунта.
+                    </span>
+                  </div>
+                  <!-- privacy elements -->
+                  <div class="data-edit__field-container">
+                    <div class="data-edit__input-field profile-edit__input-field">
+                      <div class="checkbox">
+                        <input id="show-my-room-checkbox" type="checkbox" class="checkbox__input" checked>
+                        <label for="show-my-room-checkbox" class="checkbox__label">Показывать номер моей комнаты</label>
+                      </div>
+                      <div class="checkbox">
+                        <input id="show-my-phone-checkbox" type="checkbox" class="checkbox__input" checked>
+                        <label for="show-my-phone-checkbox" class="checkbox__label">Показывать мой номер телефона</label>
+                      </div>
+                      <div class="checkbox">
+                        <input id="show-my-vk-link-checkbox" type="checkbox" class="checkbox__input" checked>
+                        <label for="show-my-vk-link-checkbox" class="checkbox__label">Показывать ссылку на мой профиль вконтакте</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <button class="profile-edit__save-edit-btn profile-edit__save-edit-btn--mobile primary-btn">Сохранить</button>
             </div>
           </div>
         </div>

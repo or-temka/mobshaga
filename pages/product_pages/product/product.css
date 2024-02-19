@@ -79,44 +79,36 @@ body {
   0% {
     -webkit-transform: translateX(-3px);
             transform: translateX(-3px);
-    color: #fff;
   }
   25% {
     -webkit-transform: translateX(3px);
             transform: translateX(3px);
-    color: black;
   }
   50% {
     -webkit-transform: translateX(-3px);
             transform: translateX(-3px);
-    color: red;
   }
   100% {
     -webkit-transform: translateX(0px);
             transform: translateX(0px);
-    color: aqua;
   }
 }
 @keyframes wrong-rocking {
   0% {
     -webkit-transform: translateX(-3px);
             transform: translateX(-3px);
-    color: #fff;
   }
   25% {
     -webkit-transform: translateX(3px);
             transform: translateX(3px);
-    color: black;
   }
   50% {
     -webkit-transform: translateX(-3px);
             transform: translateX(-3px);
-    color: red;
   }
   100% {
     -webkit-transform: translateX(0px);
             transform: translateX(0px);
-    color: aqua;
   }
 }
 .logo {
@@ -491,7 +483,7 @@ body {
 }
 
 .main {
-  min-height: 100px;
+  min-height: 70vh;
 }
 .main__section {
   margin-top: 30px;

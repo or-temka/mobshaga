@@ -67,21 +67,17 @@ body {
 @keyframes wrong-rocking {
   0% {
     transform: translateX(-3px);
-    color: #fff;
   }
 
   25% {
     transform: translateX(3px);
-    color: black;
   }
 
   50% {
     transform: translateX(-3px);
-    color: red;
   }
 
   100% {
     transform: translateX(0px);
-    color: aqua;
   }
 }

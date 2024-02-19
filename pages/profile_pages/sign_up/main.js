@@ -34,3 +34,4 @@ document.getElementById("hotel-number-select").addEventListener("change", (event
     inputForDisable.setAttribute("placeholder", "Например: 4301");
   }
 });
+
