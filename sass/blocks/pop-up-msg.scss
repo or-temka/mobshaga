@@ -7,6 +7,8 @@
   
   display: none;
 
+  animation: pop-up-fly 0.2s ease-in-out;
+
   &__container {
     margin: 0 auto;
     width: 90%;
@@ -25,6 +27,8 @@
 
   &__warning-img {
     display: none;
+    width: 30px;
+    height: 30px;
   }
 
   &__btn {
@@ -39,5 +43,25 @@
       margin-bottom: 50px;
       width: 80%;
     }
+  }
+}
+
+@keyframes pop-up-fly {
+  0% {
+    transform: translateX(-120%);
+  }
+  
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes pop-up-fly-reverse {
+  0% {
+    transform: translateX(0%);
+  }
+  
+  100% {
+    transform: translateX(120%);
   }
 }

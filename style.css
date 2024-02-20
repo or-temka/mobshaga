@@ -677,6 +677,8 @@ body {
   bottom: 20px;
   z-index: 1000;
   display: none;
+  -webkit-animation: pop-up-fly 0.2s ease-in-out;
+          animation: pop-up-fly 0.2s ease-in-out;
 }
 .pop-up-msg__container {
   margin: 0 auto;
@@ -698,6 +700,8 @@ body {
 }
 .pop-up-msg__warning-img {
   display: none;
+  width: 30px;
+  height: 30px;
 }
 .pop-up-msg__btn {
   padding: 10px 50px;
@@ -708,6 +712,46 @@ body {
   .pop-up-msg__container {
     margin-bottom: 50px;
     width: 80%;
+  }
+}
+@-webkit-keyframes pop-up-fly {
+  0% {
+    -webkit-transform: translateX(-120%);
+            transform: translateX(-120%);
+  }
+  100% {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+}
+@keyframes pop-up-fly {
+  0% {
+    -webkit-transform: translateX(-120%);
+            transform: translateX(-120%);
+  }
+  100% {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+}
+@-webkit-keyframes pop-up-fly-reverse {
+  0% {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+  100% {
+    -webkit-transform: translateX(120%);
+            transform: translateX(120%);
+  }
+}
+@keyframes pop-up-fly-reverse {
+  0% {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+  100% {
+    -webkit-transform: translateX(120%);
+            transform: translateX(120%);
   }
 }
 .product-sort {
@@ -964,6 +1008,11 @@ body {
   margin-top: 30px;
   margin-bottom: 10px;
 }
+.marketplace__load-also-btn {
+  margin: 10px auto;
+  display: none;
+  margin-top: 30px;
+}
 
 @media (max-width: 1150px) {
   .marketplace {
@@ -1013,6 +1062,43 @@ body {
   }
   .marketplace__also-btn {
     background-color: #fff;
+  }
+}
+.load-progress-block {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.load-progress-block__svg-elem {
+  width: 40px;
+  height: 40px;
+}
+.load-progress-block__symbol {
+  fill: none;
+  stroke: #7000FF;
+  stroke-width: 5px;
+  stroke-linecap: round;
+  stroke-dasharray: 300%;
+  -webkit-animation: circle-rotate 1.5s infinite linear;
+          animation: circle-rotate 1.5s infinite linear;
+  stroke-dashoffset: 230;
+}
+
+@-webkit-keyframes circle-rotate {
+  0% {
+    stroke-dashoffset: 230;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes circle-rotate {
+  0% {
+    stroke-dashoffset: 230;
+  }
+  100% {
+    stroke-dashoffset: 0;
   }
 }
 .down-menu__svg-img--search {

@@ -1,0 +1,27 @@
+.load-progress-block {
+  width: fit-content;
+
+  &__svg-elem {
+    width: 40px;
+    height: 40px;
+  }
+
+  &__symbol {
+    fill: none;
+    stroke: $main-color;
+    stroke-width: 5px;
+    stroke-linecap: round;
+    stroke-dasharray: 300%;
+    animation: circle-rotate 1.5s infinite linear;
+    stroke-dashoffset: 230;
+  }
+}
+
+@keyframes circle-rotate {
+  0% {
+    stroke-dashoffset: 230;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}

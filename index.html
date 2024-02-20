@@ -29,8 +29,8 @@
       <div class="header__right-panel">
         <input type="text" class="input input--search header__search" placeholder="Поиск">
         <ul class="header__menu menu">
-          <li class="header__menu-item menu__item"><a href="#">Магазины</a></li>
-          <li class="header__menu-item menu__item"><a href="#">Поездки</a></li>
+          <li class="header__menu-item menu__item"><a id="shops-menu-link" href="#">Магазины</a></li>
+          <li class="header__menu-item menu__item"><a id="travel-menu-link" href="#">Поездки</a></li>
           <li class="header__menu-item menu__item"><a href="#">Вахта</a></li>
           <li class="header__menu-item menu__item menu__parent">
             <a href="#" class="menu__parent-text menu__parent-arrow">Торговая площадка</a>
@@ -303,6 +303,11 @@
               </div>
             </div>
             <button class="next-btn marketplace__also-btn">Показать ещё</button>
+            <div class="load-progress-block marketplace__load-also-btn">
+              <svg class="load-progress-block__svg-elem" width="40" height="36" viewBox="0 0 40 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path class="load-progress-block__symbol" d="M3 33V3L20 21.5L37 3V33" stroke="#7000FF" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>      
           </div>
         </div>
       </section>
