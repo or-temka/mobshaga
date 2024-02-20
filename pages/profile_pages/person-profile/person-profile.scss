@@ -1,7 +1,10 @@
 @import '../../../sass/imports';
 
 // Импорты именно для данной страницы
-
+@import '../../../sass/blocks/product';
+@import '../../../sass/blocks/about-person-menu';
+@import '../../../sass/blocks/person-star';
+@import '../../../sass/blocks/profile';
 
 //Выделения для данной страницы
 
@@ -13,4 +16,12 @@
   &__profile {
 
   }  
+}
+
+@media (max-width: 576px) {
+  .person-profile {
+
+    background-color: transparent;
+    padding: 0;
+  }
 }

@@ -11,9 +11,26 @@
     margin-bottom: 4px;
   }
 
+  &__star-path {
+    fill: #8ad731;
+    &--normal {
+      fill: #F1CB00;
+    }
+    &--bad {
+      fill: rgb(255, 64, 64);
+    }
+  }
+
   &__val {
     color: $good-star-color;
     font-size: var(--bigest-text-size);
     font-weight: 500;
+    color: #8ad731;
+    &--normal {
+      color: #F1CB00;
+    }
+    &--bad {
+      color: rgb(255, 64, 64);
+    }
   }
 }

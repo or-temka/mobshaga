@@ -516,12 +516,28 @@ body {
 }
 .main__label {
   font-size: var(--bigest-text-size);
-  font-weight: 500;
+  font-weight: 400;
+  margin-left: 30px;
+}
+.main__label--small-margin {
+  margin-left: 15px;
+}
+.main__label--normal-margin {
+  margin-left: 20px;
+}
+.main__label--big-margin {
+  margin-left: 40px;
 }
 
 @media (max-width: 930px) {
   .main {
     margin-bottom: 80px;
+  }
+}
+@media (max-width: 576px) {
+  .main__label {
+    margin: 0;
+    font-weight: 500;
   }
 }
 .footer {

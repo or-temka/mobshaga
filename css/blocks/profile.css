@@ -1,0 +1,9 @@
+.profile__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.profile__main-img {
+  width: 233px;
+  height: 233px;
+}
