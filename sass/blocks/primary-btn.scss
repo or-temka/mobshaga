@@ -41,4 +41,15 @@
       background-color: $main-color;
     }
   }
+
+  &--transparent-grey {
+    background-color: transparent;
+    color: $text-color;
+    border: 1px solid $border-color;
+
+    &:hover {
+      color: #fff;
+      background-color: $text-color;
+    }
+  }
 }

@@ -18,7 +18,11 @@
   }
 
   &__menu {
-    margin-top: 20px;
+    margin-top: 17px;
+  }
+
+  &__menu:first-child {
+    margin-top: 0;
   }
 
   &__menu-item {

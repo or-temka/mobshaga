@@ -35,7 +35,7 @@ export class NonUseBtn{
         this.notificationBlock.style.animation = "pop-up-fly 0.2s ease-in-out";
         this.nowNotificationActive = false;
       }, 200);
-    }, textNotification.length * 80);
+    }, textNotification.length * 60);
   }
   
 }

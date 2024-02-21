@@ -1,0 +1,59 @@
+@import '../../../sass/imports';
+
+// Импорты именно для данной страницы
+@import '../../../sass/blocks/product';
+@import '../../../sass/blocks/next-btn';
+
+//Выделения для данной страницы
+
+.my-products {
+  background-color: #fff;
+  padding: 22px;
+  display: flex;
+  margin: 0 auto;
+
+  &__products {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 22px;
+    row-gap: 33px;
+  }
+}
+
+@media (max-width: 1150px) {
+  .my-products {
+    width: 794px;
+  }
+}
+
+@media (max-width: 930px) {
+  .my-products {
+    width: 522px;
+  }
+}
+
+@media (max-width: 650px) {
+  .my-products {
+    background-color: transparent;
+    width: 530px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .my-products {
+    width: 100%;
+
+    &__products {
+      column-gap: 10px;
+      row-gap: 10px;
+      justify-content: space-between;
+    }
+
+    &__product {
+      width: 48%;
+    }
+  }
+}

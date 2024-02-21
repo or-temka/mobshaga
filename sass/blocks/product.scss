@@ -1,5 +1,6 @@
 .product {
   width: 250px;
+  position: relative;
 
   &:hover {
     & .product__change-photo-line::after {
@@ -20,6 +21,7 @@
     display: block;
     width: auto;
     cursor: pointer;
+    position: relative;
   }
 
   &__change-photo-box {
@@ -129,6 +131,63 @@
   &__room {
     color: $grey-color;
     font-size: var(--small-text-size);
+  }
+
+  &__edit-btns {
+    position: absolute;
+    z-index: 20;
+    padding: 5px;
+    top: 0;
+    right: 0;
+    cursor: default;
+  }
+
+  &__edit-btn {
+    background-color: #ffffff40;
+    backdrop-filter: blur(2px);
+    
+    width: 30px;
+    height: 30px;
+    border: 0px;
+    outline: none;
+    border-radius: 4px;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #ffffff9c;
+    }
+
+    &--delete {
+      background-image: url("/source/svg/delete.svg");
+    }
+
+    &--edit {
+      background-image: url("/source/svg/edit.svg");
+    }
+
+  }
+
+  &__on-verification-container {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    z-index: 20;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__on-verification-field {
+    width: 100%;
+    background-color: #F1CB00;
+    padding: 5px 10px;
+    border-radius: 0 0 3px 3px;
+    text-align: center;
+  }
+
+  &__on-verification-text {
+
   }
 
 }

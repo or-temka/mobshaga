@@ -55,6 +55,21 @@
     border-radius: 50%;
     object-fit: cover;
   }
+
+  // not user -----
+  &__not-user {
+    padding: 10px;
+    text-align: center;
+  }
+
+  &__not-user-link {
+    color: $link-color;
+    text-decoration: underline;
+  }
+
+  &__not-user-text {
+
+  }
 }
 
 @media (max-width: 930px) {

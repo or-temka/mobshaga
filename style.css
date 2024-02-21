@@ -305,6 +305,15 @@ body {
   color: #fff;
   background-color: #7000FF;
 }
+.primary-btn--transparent-grey {
+  background-color: transparent;
+  color: #333333;
+  border: 1px solid #CED4DA;
+}
+.primary-btn--transparent-grey:hover {
+  color: #fff;
+  background-color: #333333;
+}
 
 .header {
   -webkit-box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.04);
@@ -459,7 +468,10 @@ body {
   color: #7000FF;
 }
 .mobile-menu__menu {
-  margin-top: 20px;
+  margin-top: 17px;
+}
+.mobile-menu__menu:first-child {
+  margin-top: 0;
 }
 .mobile-menu__menu-item {
   line-height: 22px;
@@ -665,7 +677,14 @@ body {
   -o-object-fit: cover;
      object-fit: cover;
 }
-
+.down-menu__not-user {
+  padding: 10px;
+  text-align: center;
+}
+.down-menu__not-user-link {
+  color: #0038FF;
+  text-decoration: underline;
+}
 @media (max-width: 930px) {
   .down-menu {
     display: block;
@@ -806,6 +825,7 @@ body {
 }
 .product {
   width: 250px;
+  position: relative;
 }
 .product:hover .product__change-photo-line::after {
   display: block;
@@ -822,6 +842,7 @@ body {
   display: block;
   width: auto;
   cursor: pointer;
+  position: relative;
 }
 .product__change-photo-box {
   width: 250px;
@@ -942,7 +963,55 @@ body {
   color: #828282;
   font-size: var(--small-text-size);
 }
-
+.product__edit-btns {
+  position: absolute;
+  z-index: 20;
+  padding: 5px;
+  top: 0;
+  right: 0;
+  cursor: default;
+}
+.product__edit-btn {
+  background-color: rgba(255, 255, 255, 0.2509803922);
+  -webkit-backdrop-filter: blur(2px);
+          backdrop-filter: blur(2px);
+  width: 30px;
+  height: 30px;
+  border: 0px;
+  outline: none;
+  border-radius: 4px;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+}
+.product__edit-btn:hover {
+  background-color: rgba(255, 255, 255, 0.6117647059);
+}
+.product__edit-btn--delete {
+  background-image: url("/source/svg/delete.svg");
+}
+.product__edit-btn--edit {
+  background-image: url("/source/svg/edit.svg");
+}
+.product__on-verification-container {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  z-index: 20;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.product__on-verification-field {
+  width: 100%;
+  background-color: #F1CB00;
+  padding: 5px 10px;
+  border-radius: 0 0 3px 3px;
+  text-align: center;
+}
 @media (max-width: 576px) {
   .product {
     background-color: #fff;

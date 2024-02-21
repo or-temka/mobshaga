@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Мобщага</title>
+  <title>Мои объявления | Мобщага</title>
   <link rel="apple-touch-icon" sizes="180x180" href="/source/icons/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/source/icons/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/source/icons/favicon-16x16.png">
   <link rel="manifest" href="/source/icons/site.webmanifest">
   <link rel="stylesheet" href="/node_modules/normalize.css/normalize.css" type = "text/css">
   <link rel="stylesheet" href="/source/fonts/rubik/stylesheet.css" type = "text/css">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="my-products.css">
 </head>
 <body>
   <!-- header ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
@@ -98,11 +98,11 @@
       </ul>
       <ul class="menu mobile-menu__menu">
         <li class="menu__item mobile-menu__menu-item mobile-menu__menu-label"><a class="mobile-menu__link" href="#">Профиль</a></li>
-        <li class="menu__item mobile-menu__menu-item"><a class="mobile-menu__link" href="/pages/product_pages/my_products/my-products.html">Мои объявления</a></li>
-        <li class="menu__item mobile-menu__menu-item"><a class="mobile-menu__link travel-menu-link" href="#">Мои поездки</a></li>
-        <li class="menu__item mobile-menu__menu-item"><a class="mobile-menu__link shops-menu-link" href="#">Мой магазин</a></li>
+        <li class="menu__item mobile-menu__menu-item"><a class="mobile-menu__link" href="/pages/profile_pages/person-profile/person-profile.html">Мой профиль</a></li>
+        <li class="menu__item mobile-menu__menu-item"><a class="mobile-menu__link msgs-btn" href="#">Сообщения</a></li>
+        <li class="menu__item mobile-menu__menu-item"><a class="mobile-menu__link person-notifications" href="#">Уведомления</a></li>
         <li class="menu__item mobile-menu__menu-item"><a class="mobile-menu__link" href="/pages/profile_pages/profile_edit/profile-edit.html">Редактировать профиль</a></li>
-        <li class="menu__item mobile-menu__menu-item"><a class="mobile-menu__link" href="#">Выйти</a></li>
+        <li class="menu__item mobile-menu__menu-item"><a class="mobile-menu__link" href="#">Выйти из аккаунта</a></li>
       </ul>
       <div class="mobile-menu__more-btns">
         <span class="mobile-menu__more-btn"><a class="mobile-menu__more-link" href="#">Правовые документы</a></span>
@@ -113,10 +113,6 @@
 
   <!-- mobile down menu -->
   <nav class="down-menu">
-    <div class="down-menu__not-user" style="display: none;">
-      <a class="down-menu__not-user-link" href="/pages/profile_pages/sign_in/sign-in.html">Войдите в аккаунт</a>
-      <span class="down-menu__not-user-text">, чтобы пользоваться всеми возможностями сервиса</span>
-    </div>
     <div class="down-menu__buttons">
       <a href="/index.html">
         <div class="down-menu__btn down-menu__btn--search">
@@ -166,154 +162,151 @@
       <section class="main__section">
         <!-- main__header -->
         <div class="main__header">
-          <div class="main__head-line main__head-first-line">
-            <h2 class="h2 main__label main__label--normal-margin">Торговая площадка</h2>
-            <button class="primary-btn primary-btn--with-icon primary-btn--category">Категории</button>
-          </div>
-          <div class="product-sort main__head-line main__sort main__head-second-line">
-            <span class="product-sort__label">Сортировка:</span>
-            <span id="sortByPrice" class="product-sort__text-of-sort">По цене</span>
-            <span id="sortByPopularity" class="product-sort__text-of-sort">По популярности</span>
-            <span id="sortByDate" class="product-sort__text-of-sort">По дате публикации</span>
-          </div>
+          <h2 class="h2 main__label main__label--normal-margin">Мои объявления</h2>
         </div>
         <!-- main content -->
-        <div class="main__content">
-          <div class="marketplace">
-            <div class="marketplace__products">
-              <!-- product -->
-              <div class="product marketplace__product">
-                <a class="product__photo-container" href="pages/product_pages/product/product.html">
-                  <img src="source/product_img/f1.jpg" alt="1" class="product__mobile-photo">
-                  <ul class="product__change-photo-box">
-                    <li class="product__change-photo-line"></li>
-                    <img src="source/product_img/f1.jpg" alt="1" class="product__img">
-                    <li class="product__change-photo-line"></li>
-                    <img src="source/product_img/a2.jpg" alt="1" class="product__img">
-                    <li class="product__change-photo-line"></li>
-                    <img src="source/product_img/a1.jpg" alt="1" class="product__img">
-                  </ul>
-                </a>
-                <div class="product__info-container">
-                  <h3 class="h3"><a class="product__name" href="pages/product_pages/product/product.html">Какое-то очень интересное название объявления для такого</a></h3>
-                  <span class="product__price">5450</span>
-                  <div class="product__more-info">
-                    <h4 class="h4"><a class="product__human" href="/pages/profile_pages/person-profile/person-profile.html">Артём Щегорцов</a></h4>
-                    <div class="product__more-than">
-                      <span class="product__date">12 января 17:43</span>
-                      <span class="product__room">Общ. 5 (5403)</span>
-                    </div>
+        <div class="main__content my-products">
+          <div class="my-products__products">
+            <!-- product -->
+            <div class="product my-products__product">
+              <div class="product__edit-btns">
+                <button class="product__edit-btn product__edit-btn--delete"></button>
+                <button class="product__edit-btn product__edit-btn--edit"></button>
+              </div>
+              <a class="product__photo-container" href="pages/product_pages/product/product.html">
+                <div class="product__on-verification-container">
+                  <div class="product__on-verification-field">
+                    <span class="product__on-verification-text">На проверке</span>
                   </div>
                 </div>
-              </div>
-              <!-- product -->
-              <div class="product marketplace__product">
-                <a class="product__photo-container">
-                  <img src="source/product_img/f1.jpg" alt="1" class="product__mobile-photo">
-                  <ul class="product__change-photo-box">
-                    <li class="product__change-photo-line"></li>
-                    <img src="source/product_img/f1.jpg" alt="1" class="product__img">
-                    <li class="product__change-photo-line"></li>
-                    <img src="source/product_img/a2.jpg" alt="1" class="product__img">
-                    <li class="product__change-photo-line"></li>
-                    <img src="source/product_img/a1.jpg" alt="1" class="product__img">
-                  </ul>
-                </a>
-                <div class="product__info-container">
-                  <h3 class="h3"><a class="product__name" href="#">Какое-то очень интересное название объявления для такого</a></h3>
-                  <span class="product__price">5450</span>
-                  <div class="product__more-info">
-                    <h4 class="h4"><a class="product__human" href="#">Артём Щегорцов</a></h4>
-                    <div class="product__more-than">
-                      <span class="product__date">12 января 17:43</span>
-                      <span class="product__room">Общ. 5 (5403)</span>
-                    </div>
+                <img src="/source/product_img/f1.jpg" alt="1" class="product__mobile-photo">
+                <ul class="product__change-photo-box">
+                  <li class="product__change-photo-line"></li>
+                  <img src="/source/product_img/f1.jpg" alt="1" class="product__img">
+                  <li class="product__change-photo-line"></li>
+                  <img src="/source/product_img/a2.jpg" alt="1" class="product__img">
+                  <li class="product__change-photo-line"></li>
+                  <img src="/source/product_img/a1.jpg" alt="1" class="product__img">
+                </ul>
+              </a>
+              <div class="product__info-container">
+                <h3 class="h3"><a class="product__name" href="pages/product_pages/product/product.html">Какое-то очень интересное название объявления для такого</a></h3>
+                <span class="product__price">5450</span>
+                <div class="product__more-info">
+                  <div class="product__more-than">
+                    <span class="product__date">12 января 17:43</span>
                   </div>
                 </div>
-              </div>
-              <!-- product -->
-              <div class="product marketplace__product">
-                <a class="product__photo-container">
-                  <img src="source/product_img/f1.jpg" alt="1" class="product__mobile-photo">
-                  <ul class="product__change-photo-box">
-                    <li class="product__change-photo-line"></li>
-                    <img src="source/product_img/f1.jpg" alt="1" class="product__img">
-                    <li class="product__change-photo-line"></li>
-                    <img src="source/product_img/a2.jpg" alt="1" class="product__img">
-                    <li class="product__change-photo-line"></li>
-                    <img src="source/product_img/a1.jpg" alt="1" class="product__img">
-                  </ul>
-                </a>
-                <div class="product__info-container">
-                  <h3 class="h3"><a class="product__name" href="#">Какое-то очень интересное название объявления для такого</a></h3>
-                  <span class="product__price">5450</span>
-                  <div class="product__more-info">
-                    <h4 class="h4"><a class="product__human" href="#">Артём Щегорцов</a></h4>
-                    <div class="product__more-than">
-                      <span class="product__date">12 января 17:43</span>
-                      <span class="product__room">Общ. 5 (5403)</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- product -->
-              <div class="product marketplace__product">
-                <a class="product__photo-container">
-                  <img src="source/product_img/f1.jpg" alt="1" class="product__mobile-photo">
-                  <ul class="product__change-photo-box">
-                    <li class="product__change-photo-line"></li>
-                    <img src="source/product_img/f1.jpg" alt="1" class="product__img">
-                    <li class="product__change-photo-line"></li>
-                    <img src="source/product_img/a2.jpg" alt="1" class="product__img">
-                    <li class="product__change-photo-line"></li>
-                    <img src="source/product_img/a1.jpg" alt="1" class="product__img">
-                  </ul>
-                </a>
-                <div class="product__info-container">
-                  <h3 class="h3"><a class="product__name" href="#">Какое-то очень интересное название объявления для такого</a></h3>
-                  <span class="product__price">5450</span>
-                  <div class="product__more-info">
-                    <h4 class="h4"><a class="product__human" href="#">Артём Щегорцов</a></h4>
-                    <div class="product__more-than">
-                      <span class="product__date">12 января 17:43</span>
-                      <span class="product__room">Общ. 5 (5403)</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- product -->
-              <div class="product marketplace__product">
-                <a class="product__photo-container">
-                  <img src="source/product_img/f1.jpg" alt="1" class="product__mobile-photo">
-                  <ul class="product__change-photo-box">
-                    <li class="product__change-photo-line"></li>
-                    <img src="source/product_img/f1.jpg" alt="1" class="product__img">
-                    <li class="product__change-photo-line"></li>
-                    <img src="source/product_img/a2.jpg" alt="1" class="product__img">
-                    <li class="product__change-photo-line"></li>
-                    <img src="source/product_img/a1.jpg" alt="1" class="product__img">
-                  </ul>
-                </a>
-                <div class="product__info-container">
-                  <h3 class="h3"><a class="product__name" href="#">Какое-то очень интересное название объявления для такого</a></h3>
-                  <span class="product__price">5450</span>
-                  <div class="product__more-info">
-                    <h4 class="h4"><a class="product__human" href="#">Артём Щегорцов</a></h4>
-                    <div class="product__more-than">
-                      <span class="product__date">12 января 17:43</span>
-                      <span class="product__room">Общ. 5 (5403)</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
               </div>
             </div>
-            <button class="next-btn marketplace__also-btn">Показать ещё</button>
-            <div class="load-progress-block marketplace__load-also-btn">
-              <svg class="load-progress-block__svg-elem" width="40" height="36" viewBox="0 0 40 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path class="load-progress-block__symbol" d="M3 33V3L20 21.5L37 3V33" stroke="#7000FF" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-            </div>      
+            <!-- product -->
+            <div class="product my-products__product">
+              <div class="product__edit-btns">
+                <button class="product__edit-btn product__edit-btn--delete"></button>
+                <button class="product__edit-btn product__edit-btn--edit"></button>
+              </div>
+              <a class="product__photo-container" href="pages/product_pages/product/product.html">
+                <img src="/source/product_img/f2.jpg" alt="1" class="product__mobile-photo">
+                <ul class="product__change-photo-box">
+                  <li class="product__change-photo-line"></li>
+                  <img src="/source/product_img/f1.jpg" alt="1" class="product__img">
+                  <li class="product__change-photo-line"></li>
+                  <img src="/source/product_img/a2.jpg" alt="1" class="product__img">
+                  <li class="product__change-photo-line"></li>
+                  <img src="/source/product_img/a1.jpg" alt="1" class="product__img">
+                </ul>
+              </a>
+              <div class="product__info-container">
+                <h3 class="h3"><a class="product__name" href="pages/product_pages/product/product.html">Какое-то очень интересное название объявления для такого</a></h3>
+                <span class="product__price">5450</span>
+                <div class="product__more-info">
+                  <div class="product__more-than">
+                    <span class="product__date">12 января 17:43</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- product -->
+            <div class="product my-products__product">
+              <div class="product__edit-btns">
+                <button class="product__edit-btn product__edit-btn--delete"></button>
+                <button class="product__edit-btn product__edit-btn--edit"></button>
+              </div>
+              <a class="product__photo-container" href="pages/product_pages/product/product.html">
+                <img src="/source/product_img/a1.jpg" alt="1" class="product__mobile-photo">
+                <ul class="product__change-photo-box">
+                  <li class="product__change-photo-line"></li>
+                  <img src="/source/product_img/f1.jpg" alt="1" class="product__img">
+                  <li class="product__change-photo-line"></li>
+                  <img src="/source/product_img/a2.jpg" alt="1" class="product__img">
+                  <li class="product__change-photo-line"></li>
+                  <img src="/source/product_img/a1.jpg" alt="1" class="product__img">
+                </ul>
+              </a>
+              <div class="product__info-container">
+                <h3 class="h3"><a class="product__name" href="pages/product_pages/product/product.html">Какое-то очень интересное название объявления для такого</a></h3>
+                <span class="product__price">5450</span>
+                <div class="product__more-info">
+                  <div class="product__more-than">
+                    <span class="product__date">12 января 17:43</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- product -->
+            <div class="product my-products__product">
+              <div class="product__edit-btns">
+                <button class="product__edit-btn product__edit-btn--delete"></button>
+                <button class="product__edit-btn product__edit-btn--edit"></button>
+              </div>
+              <a class="product__photo-container" href="pages/product_pages/product/product.html">
+                <img src="/source/product_img/a2.jpg" alt="1" class="product__mobile-photo">
+                <ul class="product__change-photo-box">
+                  <li class="product__change-photo-line"></li>
+                  <img src="/source/product_img/f1.jpg" alt="1" class="product__img">
+                  <li class="product__change-photo-line"></li>
+                  <img src="/source/product_img/a2.jpg" alt="1" class="product__img">
+                  <li class="product__change-photo-line"></li>
+                  <img src="/source/product_img/a1.jpg" alt="1" class="product__img">
+                </ul>
+              </a>
+              <div class="product__info-container">
+                <h3 class="h3"><a class="product__name" href="pages/product_pages/product/product.html">Какое-то очень интересное название объявления для такого</a></h3>
+                <span class="product__price">5450</span>
+                <div class="product__more-info">
+                  <div class="product__more-than">
+                    <span class="product__date">12 января 17:43</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- product -->
+            <div class="product my-products__product">
+              <div class="product__edit-btns">
+                <button class="product__edit-btn product__edit-btn--delete"></button>
+                <button class="product__edit-btn product__edit-btn--edit"></button>
+              </div>
+              <a class="product__photo-container" href="pages/product_pages/product/product.html">
+                <img src="/source/product_img/f1.jpg" alt="1" class="product__mobile-photo">
+                <ul class="product__change-photo-box">
+                  <li class="product__change-photo-line"></li>
+                  <img src="/source/product_img/f1.jpg" alt="1" class="product__img">
+                  <li class="product__change-photo-line"></li>
+                  <img src="/source/product_img/a2.jpg" alt="1" class="product__img">
+                  <li class="product__change-photo-line"></li>
+                  <img src="/source/product_img/a1.jpg" alt="1" class="product__img">
+                </ul>
+              </a>
+              <div class="product__info-container">
+                <h3 class="h3"><a class="product__name" href="pages/product_pages/product/product.html">Какое-то очень интересное название объявления для такого</a></h3>
+                <span class="product__price">5450</span>
+                <div class="product__more-info">
+                  <div class="product__more-than">
+                    <span class="product__date">12 января 17:43</span>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -373,7 +366,7 @@
               <a class="msgs-btn" href="#">Сообщения</a>
             </li>
             <li class="footer__menu-item menu__item">
-              <a href="/pages/product_pages/my_products/my-products.html">Мои объявления</a>
+              <a href="#">Мои объявления</a>
             </li>
           </ul>
         </div>
