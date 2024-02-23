@@ -29,8 +29,8 @@
       <div class="header__right-panel">
         <input type="text" class="input input--search header__search" placeholder="Поиск">
         <ul class="header__menu menu">
-          <li class="header__menu-item menu__item"><a class="shops-menu-link" href="#">Магазины</a></li>
-          <li class="header__menu-item menu__item"><a class="travel-menu-link" href="#">Поездки</a></li>
+          <li class="header__menu-item menu__item"><a class="shops-menu-link unavailable-link" href="#">Магазины</a></li>
+          <li class="header__menu-item menu__item"><a class="travel-menu-link unavailable-link" href="#">Поездки</a></li>
           <li class="header__menu-item menu__item"><a href="#">Вахта</a></li>
           <li class="header__menu-item menu__item menu__parent">
             <a href="/index.html" class="menu__parent-text menu__parent-arrow">Торговая площадка</a>
@@ -60,8 +60,8 @@
             <ul class="header__menu-child header__menu-child--profile menu__child">
               <li class="menu__item menu__item-child"><a href="#">Профиль</a></li>
               <li class="menu__item menu__item-child"><a href="/pages/profile_pages/profile_edit/profile-edit.html">Редактировать профиль</a></li>
-              <li class="menu__item menu__item-child"><a class="msgs-btn" href="#">Сообщения</a></li>
-              <li class="menu__item menu__item-child"><a class="person-notifications" href="#">Уведомления</a></li>
+              <li class="menu__item menu__item-child"><a class="msgs-btn unavailable-link" href="#">Сообщения</a></li>
+              <li class="menu__item menu__item-child"><a class="person-notifications unavailable-link" href="#">Уведомления</a></li>
               <li class="menu__item menu__item-child"><a href="#">Выйти</a></li>
             </ul>
           </li>
@@ -80,8 +80,8 @@
   <nav id="mobile-menu" class="mobile-menu">
     <div class="mobile-menu__container">
       <ul class="menu mobile-menu__menu">
-        <li class="menu__item mobile-menu__menu-item"><a class="mobile-menu__link shops-menu-link" href="#">Магазины</a></li>
-        <li class="menu__item mobile-menu__menu-item"><a class="mobile-menu__link travel-menu-link" href="#">Поездки</a></li>
+        <li class="menu__item mobile-menu__menu-item"><a class="mobile-menu__link shops-menu-link unavailable-link" href="#">Магазины</a></li>
+        <li class="menu__item mobile-menu__menu-item"><a class="mobile-menu__link travel-menu-link unavailable-link" href="#">Поездки</a></li>
         <li class="menu__item mobile-menu__menu-item"><a class="mobile-menu__link" href="#">Вахта</a></li>
       </ul>
       <ul class="menu mobile-menu__menu">
@@ -93,14 +93,14 @@
       <ul class="menu mobile-menu__menu">
         <li class="menu__item mobile-menu__menu-item mobile-menu__menu-label"><a class="mobile-menu__link" href="#">Добавить</a></li>
         <li class="menu__item mobile-menu__menu-item"><a class="mobile-menu__link" href="/pages/product_pages/new_product/new-product.html">Объявление</a></li>
-        <li class="menu__item mobile-menu__menu-item"><a class="mobile-menu__link travel-menu-link" href="#">Поездку</a></li>
-        <li class="menu__item mobile-menu__menu-item"><a class="mobile-menu__link shops-menu-link" href="#">Свой магазин</a></li>
+        <li class="menu__item mobile-menu__menu-item"><a class="mobile-menu__link travel-menu-link unavailable-link" href="#">Поездку</a></li>
+        <li class="menu__item mobile-menu__menu-item"><a class="mobile-menu__link shops-menu-link unavailable-link" href="#">Свой магазин</a></li>
       </ul>
       <ul class="menu mobile-menu__menu">
         <li class="menu__item mobile-menu__menu-item mobile-menu__menu-label"><a class="mobile-menu__link" href="#">Профиль</a></li>
         <li class="menu__item mobile-menu__menu-item"><a class="mobile-menu__link" href="/pages/profile_pages/person-profile/person-profile.html">Мой профиль</a></li>
-        <li class="menu__item mobile-menu__menu-item"><a class="mobile-menu__link msgs-btn" href="#">Сообщения</a></li>
-        <li class="menu__item mobile-menu__menu-item"><a class="mobile-menu__link person-notifications" href="#">Уведомления</a></li>
+        <li class="menu__item mobile-menu__menu-item"><a class="mobile-menu__link msgs-btn unavailable-link" href="#">Сообщения</a></li>
+        <li class="menu__item mobile-menu__menu-item"><a class="mobile-menu__link person-notifications unavailable-link" href="#">Уведомления</a></li>
         <li class="menu__item mobile-menu__menu-item"><a class="mobile-menu__link" href="/pages/profile_pages/profile_edit/profile-edit.html">Редактировать профиль</a></li>
         <li class="menu__item mobile-menu__menu-item"><a class="mobile-menu__link" href="#">Выйти из аккаунта</a></li>
       </ul>
@@ -162,7 +162,11 @@
       <section class="main__section">
         <!-- main__header -->
         <div class="main__header">
-          <h2 class="h2 main__label main__label--normal-margin">Мои объявления</h2>
+          <div class="main__head-line main__head-first-line">
+            <h2 class="h2 main__label main__label--normal-margin">Мои объявления</h2>
+            <button class="primary-btn primary-btn--transparent-grey main--desktop-only">+ Создать объявление</button>
+            <button class="primary-btn primary-btn--transparent-grey main--mobile-only">+ Создать</button>
+          </div>
         </div>
         <!-- main content -->
         <div class="main__content my-products">
@@ -346,10 +350,10 @@
               <a href="/pages/product_pages/new_product/new-product.html">Объявление</a>
             </li>
             <li class="footer__menu-item menu__item">
-              <a class="travel-menu-link" href="#">Поездку</a>
+              <a class="travel-menu-link unavailable-link" href="#">Поездку</a>
             </li>
             <li class="footer__menu-item menu__item">
-              <a class="shops-menu-link" href="#">Свой магазин</a>
+              <a class="shops-menu-link unavailable-link" href="#">Свой магазин</a>
             </li>
           </ul>
           <ul class="footer__menu-column menu">
@@ -360,10 +364,10 @@
               <a href="/pages/profile_pages/profile_edit/profile-edit.html">Мой профиль</a>
             </li>
             <li class="footer__menu-item menu__item">
-              <a class="shops-menu-link" href="#">Мой магазин</a>
+              <a class="shops-menu-link unavailable-link" href="#">Мой магазин</a>
             </li>
             <li class="footer__menu-item menu__item">
-              <a class="msgs-btn" href="#">Сообщения</a>
+              <a class="msgs-btn unavailable-link" href="#">Сообщения</a>
             </li>
             <li class="footer__menu-item menu__item">
               <a href="#">Мои объявления</a>

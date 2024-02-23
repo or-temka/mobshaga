@@ -46,6 +46,10 @@ body {
   }
 }
 
+.unavailable-link {
+  color: $border-color;
+}
+
 @media (max-width: 1150px) {
   .wrapper {
     width: 93%;

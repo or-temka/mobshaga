@@ -60,6 +60,10 @@ body {
   color: #7000FF;
 }
 
+.unavailable-link {
+  color: #CED4DA;
+}
+
 @media (max-width: 1150px) {
   .wrapper {
     width: 93%;
@@ -496,6 +500,9 @@ body {
 .main {
   min-height: 70vh;
 }
+.main--mobile-only {
+  display: none;
+}
 .main__section {
   margin-top: 30px;
   margin-bottom: 30px;
@@ -549,6 +556,13 @@ body {
   .main__label {
     margin: 0;
     font-weight: 500;
+  }
+  .main--desktop-only {
+    display: none;
+  }
+  .main--mobile-only {
+    display: block;
+    padding: 7px 13px;
   }
 }
 .footer {

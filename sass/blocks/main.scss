@@ -1,6 +1,10 @@
 .main {
   min-height: 70vh;
 
+  &--mobile-only {
+    display: none;
+  }
+
   &__section {
     margin-top: 30px;
     margin-bottom: 30px;
@@ -42,6 +46,8 @@
       margin-left: 40px;
     }
   }
+
+  
 }
 
 @media (max-width: 930px) {
@@ -56,6 +62,15 @@
     &__label {
       margin: 0;
       font-weight: 500;
+    }
+
+    &--desktop-only {
+      display: none;
+    }
+
+    &--mobile-only {
+      display: block;
+      padding: 7px 13px;
     }
   }
 }
